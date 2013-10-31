@@ -17,3 +17,6 @@ missing
 *.jar
 *.war
 *.ear
+Doxyfile
+htdocs
+fctransfer.spec
