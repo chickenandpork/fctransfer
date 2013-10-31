@@ -1,0 +1,79 @@
+/* smallfoot.org is owned by allan.clark */
+package org.smallfoot.filexfer;
+
+//import java.io.*;
+//import java.util.*;
+//import javax.activation.DataSource;
+//import javax.activation.URLDataSource;
+import gnu.getopt.Getopt;
+//import gnu.getopt.LongOpt;
+
+/**
+ * @file
+ */
+
+public class WinchFactory
+{
+    /**
+     * provides a FileTransferWinch matching the URL given
+     *
+     * @return populated winch based on the URL given
+     * @throws java.net.MalformedURLException if the URL created form the String is malformed
+     * @param url URL to connect to
+     */
+    static FileTransferWinch getWinch(String url) throws java.net.MalformedURLException
+    { return getWinch(new java.net.URL (url)); }
+
+    /**
+     * provides a FileTransferWinch matching the URL given
+     *
+     * @return populated winch based on the URL given
+     * @param url URL to connect to
+     */
+    static FileTransferWinch getWinch(java.net.URL url)
+    {
+	return null;
+    }
+
+
+    public static void main(String[] args)
+    {
+        WinchFactory wf = new WinchFactory();
+	java.util.Vector<FileTransferWinch> w = new java.util.Vector();
+        Getopt g = new Getopt("upload", args, "U:u:");
+
+        int c;
+        while ((c = g.getopt()) != -1)
+        {
+            switch(c)
+            {
+		case 'U': /* add a winch */
+		    try
+		    {
+			w.add(wf.getWinch(g.getOptarg()));
+		    }
+		    catch (Exception e) { System.out.println("Exception processing URL \""+g.getOptarg()+"\": "+e.getMessage()); }
+		    break;
+
+		case 'u': /* push a file */
+		    try
+		    {
+			FileTransferWinch f1[] = null;
+
+			for (FileTransferWinch f: w.toArray(f1))
+			{
+			    f.upload(g.getOptarg());
+			    break;
+			}
+		    }
+		    catch (Exception e) { System.out.println("Exception uploading file \""+g.getOptarg()+"\": "+e.getMessage()); }
+		    break;
+
+		default:
+		    System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
+		    System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
+		    break;
+	    }
+	}
+    }
+}

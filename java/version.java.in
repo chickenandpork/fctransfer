@@ -1,0 +1,9 @@
+package org.smallfoot.parser.zone;
+
+public class version
+{
+    static public void main (String arg[])
+    {
+	System.out.println("@VERSION@.@BUILDID@");
+    }
+}

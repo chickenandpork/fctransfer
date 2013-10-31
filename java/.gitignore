@@ -1,0 +1,17 @@
+#generated autoconf
+WinchFactory.java
+Makefile
+Makefile.in
+version.java
+
+#generated buildproc
+fctransfer.class
+fctransfer.jar
+classnodist_pkgdata.stamp
+javaroot.stamp
+bld/
+
+#style == make formatting
+*.java.orig
+*.java.in.orig
+
