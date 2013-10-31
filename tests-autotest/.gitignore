@@ -1,0 +1,9 @@
+#generated autoconf
+atconfig
+atlocal
+testsuite.at
+
+#generated buildproc
+package.m4
+testsuite
+testsuite.log

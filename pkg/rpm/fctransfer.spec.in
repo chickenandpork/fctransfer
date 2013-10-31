@@ -1,0 +1,68 @@
+Summary: FibreChannel Transfer Resources
+Name: @PACKAGE@
+Version: @VERSION@
+Release: @BUILDID@
+License: Unknown
+Group: Development/Networking
+URL: http://tech.chickenandporn.com/
+Source0: http://chickenandporn.com/r/%{name}-%{version}.tar.bz2
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildArchitectures: noarch
+#BuildRequires: 
+#dammit, I hate the debug packages -- they even makes no sense in a non-executable payload
+%define debug_package %nil
+
+%description
+Tools and Resources collected from my "fctools" project (nee "vitools") to allow easier checksum-upload a large data archive using only a URL and a filename.
+
+For example, given a target URL (ftp://scott:tiger@ftp.example.com/sub/dir/) and one or more files (ie data.zip), the library:
+1) calculates a checksum
+2) uploads the checksum as .sum (in our example, a data.zip.sum file would be sent)
+3) uploads the file (in our example, data.zip)
+
+The uploaded checksum intentionally matches the checksum file used in ages-old traditional "sum" command; this is the same as the "cksum" command.
+
+An additional intention of sharing this content is to:
+1) reduce the time it takes YOU, the next developer, in uploading/sharing content
+2) emphasize better practices: checksums, people, they're really cool things
+3) expand to provide an interface to additional upload URL protocols: cifs://, etc.
+
+
+
+%package java
+Summary: FibreChannel Transfer Resources in Java
+Group: Development/Networking
+
+%description java
+Tools and Resources collected from my "fctools" project for uploading large data/config/content.  Implemented in Java.  This is a wrapper for the development java libs.
+
+
+%prep
+%setup
+
+%build
+%configure %{?configure_additional:%{configure_additional}} && make
+
+%install
+make install DESTDIR=%{buildroot}
+rm %{buildroot}/%{_datadir}/@PACKAGE@/@PACKAGE@.class
+rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
+
+%clean
+%{__rm} -rf %{buildroot}
+
+%check
+%{!?skipcheck:make check}
+
+
+%files
+%defattr(-, root, root, 0644)
+
+%files java
+# exported in java/Makefile.am
+%{_datadir}/@PACKAGE@/@PACKAGE@.jar
+
+
+%changelog
+* Thu Oct 31 2013 Allan Clark <allanc@chickenandporn.com> - 0.3-1
+- Initial package (split from fctools-0.2-602)
