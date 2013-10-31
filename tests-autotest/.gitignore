@@ -2,6 +2,8 @@
 atconfig
 atlocal
 testsuite.at
+Makefile
+Makefile.in
 
 #generated buildproc
 package.m4
