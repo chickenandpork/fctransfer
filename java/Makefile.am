@@ -1,10 +1,10 @@
-nodist_pkgdata_JAVA = FileTransferWinch.java WinchFactory.java
+nodist_pkgdata_JAVA = FileTransferWinch.java WinchFactory.java FTP4J.java version.java
 nodist_pkgdata_DATA = $(notdir $(subdir)).jar
 
 EXTRA_DIST = $(nodist_pkgdata_JAVA) WinchFactory.java.in
 CONFIG_CLEAN_FILES = $(notdir $(subdir)).jar
 
-AM_JAVACFLAGS= -cp $(JAVAROOT):$(top_builddir)/depjars/commons-lang3-3.1.jar:$(top_builddir)/depjars/commons-net-3.1.jar:@GETOPTJAR@
+AM_JAVACFLAGS= -cp $(JAVAROOT):$(top_builddir)/depjars/commons-lang3-3.1.jar:$(top_builddir)/depjars/commons-net-3.1.jar:$(top_builddir)/depjars/ftp4j-1.7.1.jar:@GETOPTJAR@
 BUILDTMP=$(shell date +%s)
 
 BUILT_SOURCES = 

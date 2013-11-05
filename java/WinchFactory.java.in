@@ -7,6 +7,7 @@ package org.smallfoot.filexfer;
 //import javax.activation.URLDataSource;
 import gnu.getopt.Getopt;
 //import gnu.getopt.LongOpt;
+import java.util.TreeSet;
 
 /**
  * @file
@@ -32,48 +33,77 @@ public class WinchFactory
      */
     static FileTransferWinch getWinch(java.net.URL url)
     {
-	return null;
+        if (FTP4J.handles(url))
+            return new FTP4J(url);
+        else
+            return null;
     }
 
 
     public static void main(String[] args)
     {
         WinchFactory wf = new WinchFactory();
-	java.util.Vector<FileTransferWinch> w = new java.util.Vector();
-        Getopt g = new Getopt("upload", args, "U:u:");
+        java.util.Vector<FileTransferWinch> w = new java.util.Vector();
+        Getopt g = new Getopt("upload", args, "U:u:l");
 
         int c;
         while ((c = g.getopt()) != -1)
         {
             switch(c)
             {
-		case 'U': /* add a winch */
-		    try
-		    {
-			w.add(wf.getWinch(g.getOptarg()));
-		    }
-		    catch (Exception e) { System.out.println("Exception processing URL \""+g.getOptarg()+"\": "+e.getMessage()); }
-		    break;
+            case 'l': /* list winches */
+            {
+                TreeSet<String> t = new TreeSet();
+for (FileTransferWinch f: w)
+                    t.add(f.getClass().getName().replaceAll("^.*\\.",""));
+for (String s:t)
+                    System.out.println("winch: "+s);
+            }
+            break;
 
-		case 'u': /* push a file */
-		    try
-		    {
-			FileTransferWinch f1[] = null;
+            case 'U': /* add a winch */
+                try
+                {
+                    FileTransferWinch ftw = wf.getWinch(g.getOptarg());
+                    if (null != ftw)
+                        w.add(ftw);
+                    else System.out.println("No uploader \"winch\" found for url \""+g.getOptarg()+"\"");
+                }
+                catch (java.net.MalformedURLException mue)
+                {
+                    System.out.print("Malformed URL Exception processing URL \""+g.getOptarg()+"\"");
+                    if (null != mue.getMessage()) System.out.print(": "+mue.getMessage());
+                    System.out.println("\nrecheck the URL versus RFC-1738");
+                }
+                catch (Exception e)
+                {
+                    System.out.println("Exception processing URL \""+g.getOptarg()+"\": "+e.getMessage());
+                    e.printStackTrace();
+                }
+                break;
 
-			for (FileTransferWinch f: w.toArray(f1))
-			{
-			    f.upload(g.getOptarg());
-			    break;
-			}
-		    }
-		    catch (Exception e) { System.out.println("Exception uploading file \""+g.getOptarg()+"\": "+e.getMessage()); }
-		    break;
+            case 'u': /* push a file */
+                try
+                {
+                    FileTransferWinch f1[] = null;
 
-		default:
-		    System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
-		    System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
-		    break;
-	    }
-	}
+for (FileTransferWinch f: w)
+                    {
+                        f.upload(g.getOptarg());
+                        break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    System.out.println("Exception uploading file \""+g.getOptarg()+"\": "+e.getMessage());
+                }
+                break;
+
+            default:
+                System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
+                System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
+                break;
+            }
+        }
     }
 }

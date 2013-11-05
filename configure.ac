@@ -129,6 +129,22 @@ AC_ARG_ENABLE(autotest,
 AM_CONDITIONAL(DO_AUTOTEST, test "$ENAB" = yes)
 
 
+AC_ARG_WITH(ftptesturl,
+[AS_HELP_STRING([--with-ftptesturl],[Enable testing of FTP by giving a test FTP URL; default=disable])],
+[
+    case "$withval" in
+        "yes") WITH_FTPTESTURL="ftp://anonymous@ftp.smallfoot.org/incoming/" ;;
+        "no")  WITH_FTPTESTURL=no  ;;
+        *) WITH_FTPTESTURL="$withval" ;;
+    esac
+],
+[
+	WITH_FTPTESTURL=no ;
+])
+AC_SUBST([FTPTESTURL], ${WITH_FTPTESTURL})
+
+
+
 AC_ARG_WITH(getoptplus,
 [AS_HELP_STRING([--with-getoptplus],[Enable inclusion of an improved getopt .jar; default=search])],
 [

@@ -22,7 +22,7 @@ BUILDTMP=$(shell date +%s)
 BUILT_SOURCES =
 
 
-@PACKAGE@.jar: depjars/commons-lang3-3.1.jar depjars/commons-net-3.1.jar java/@PACKAGE@.jar
+@PACKAGE@.jar: depjars/commons-lang3-3.1.jar depjars/commons-net-3.1.jar depjars/ftp4j-1.7.1.jar java/@PACKAGE@.jar @GETOPTJAR@
 	-rm -fr $(@D)/.workdir
 	mkdir -p $(@D)/.workdir
 	ln -f $^ $(@D)/.workdir/
@@ -30,7 +30,8 @@ BUILT_SOURCES =
 	rm -fr $(@D)/.workdir/META-INF/{LICENSE.txt,MANIFEST.MF,{SUN_MICR,TESTKEY}.{RSA,SF}}
 	echo "Manifest-Version: 1.0" > $(@D)/.workdir/MANIFEST.MF
 	echo "Created-By: @PACKAGE@-@VERSION@" >> $(@D)/.workdir/MANIFEST.MF
-	(cd $(@D)/.workdir && jar cm MANIFEST.MF META-INF org) > $@
+	echo "Main-Class: org.smallfoot.filexfer.WinchFactory"  >> $(@D)/.workdir/MANIFEST.MF
+	(cd $(@D)/.workdir && jar cm MANIFEST.MF META-INF gnu it org) > $@
 	rm -fr $(@D)/.workdir
 
 
@@ -40,7 +41,7 @@ doc: Doxyfile
 endif
 
 if DO_ASTYLE
-formatting: java/Alias4Parser.java.in java/NicknameParser.java.in java/ParserTee.java java/ZoneParser.java java/ZPAliasEntry.java java/ZPFCAliasEntry.java java/ZPZoneEntry.java
+formatting: java/FTP4J.java java/FileTransferWinch.java java/WinchFactory.java.in java/version.java.in
 if DO_GITFORMATTING
 	@git ls-files --other --exclude-standard --directory || { echo "###################### unignored local files: git add, git commit ?"; }
 	@git diff --exit-code || { echo "###################### unstaged changes: git commit -a"; exit 1; }
