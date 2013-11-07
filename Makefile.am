@@ -27,7 +27,7 @@ BUILT_SOURCES =
 	mkdir -p $(@D)/.workdir
 	ln -f $^ $(@D)/.workdir/
 	for i in $(^F) ; do (cd $(@D)/.workdir  && jar xf $$i) ; done
-	rm -fr $(@D)/.workdir/META-INF/{LICENSE.txt,MANIFEST.MF,{SUN_MICR,TESTKEY}.{RSA,SF}}
+	rm -fr $(@D)/.workdir/META-INF/{maven,LICENSE.txt,MANIFEST.MF,{SUN_MICR,TESTKEY}.{RSA,SF}}
 	echo "Manifest-Version: 1.0" > $(@D)/.workdir/MANIFEST.MF
 	echo "Created-By: @PACKAGE@-@VERSION@" >> $(@D)/.workdir/MANIFEST.MF
 	echo "Main-Class: org.smallfoot.filexfer.WinchFactory"  >> $(@D)/.workdir/MANIFEST.MF
