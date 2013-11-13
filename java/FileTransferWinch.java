@@ -16,6 +16,13 @@ public abstract class FileTransferWinch
         return getClass().getName().replaceAll("^.*\\.","");
     }
 
+    /** list one or more example URLs showing the available upload/download protocols
+     *
+     * @param url a sample URL showing user/pass/pathname
+     * @returns array of examples using that URL
+     */
+    public static String[] examples(java.net.URL url) { return "".split(";"); }
+
     /** upload a file using this FileTransferWinch; errors in upload are handled via Exceptions
      *
      * @param file the content to upload

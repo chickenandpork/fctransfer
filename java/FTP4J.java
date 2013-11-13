@@ -25,6 +25,20 @@ public class FTP4J extends FileTransferWinch
     }
 
 
+    /** list one or more example URLs showing the available upload/download protocols
+     *
+     * @param url a sample URL showing user/pass/pathname
+     * @returns array of examples using that URL
+     */
+    public static String[] examples(java.net.URL url)
+    {
+	return new String[]
+	{
+	    url.toString().replaceFirst("^[a-zA-Z0-9]+:","ftp:")
+	};
+    }
+
+
     /**
      * Attempt an upload to the remote server.  Initially very basic, this can be extended for all the intelligence we need to get data through.
      *

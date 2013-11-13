@@ -8,6 +8,7 @@ package org.smallfoot.filexfer;
 import gnu.getopt.Getopt;
 //import gnu.getopt.LongOpt;
 import java.util.TreeSet;
+import java.util.Vector;
 
 /**
  * @file
@@ -40,17 +41,46 @@ public class WinchFactory
     }
 
 
+    /**
+     * provides an array of example URLs based on the given model by iterating all known Winches
+     *
+     * @return populated array of examples
+     * @param url sample URL to be used in examples
+     * @throws java.net.MalformedURLException if the given URL chokes on conversion to a java.net.URL
+     */
+    static String[] getWinchExamples(String url) throws java.net.MalformedURLException
+    {
+	Vector<String> v = new Vector();
+
+	java.net.URL u = new java.net.URL(url);
+
+	/* manual iterative add of each Winch */
+	v.addAll(java.util.Arrays.asList(FTP4J.examples(u)));
+
+	return v.toArray(new String[0]);
+    }
+
+
     public static void main(String[] args)
     {
         WinchFactory wf = new WinchFactory();
         java.util.Vector<FileTransferWinch> w = new java.util.Vector();
-        Getopt g = new Getopt("upload", args, "U:u:l");
+        Getopt g = new Getopt("upload", args, "U:u:lL");
 
         int c;
         while ((c = g.getopt()) != -1)
         {
             switch(c)
             {
+            case 'L': /* list winches' examples */
+            {
+		try {
+		    for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
+		        System.out.println("     : "+s);
+		} catch (java.net.MalformedURLException mue) { /* URL string "http://scott:tiger@example.com/path/file" is no good */ }
+            }
+            break;
+
             case 'l': /* list winches */
             {
                 TreeSet<String> t = new TreeSet();
