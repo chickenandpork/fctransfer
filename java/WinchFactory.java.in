@@ -36,6 +36,8 @@ public class WinchFactory
     {
         if (FTP4J.handles(url))
             return new FTP4J(url);
+        if (ApacheCommonsNetSFTP.handles(url))
+            return new ApacheCommonsNetSFTP(url);
         else
             return null;
     }
@@ -56,9 +58,37 @@ public class WinchFactory
 
 	/* manual iterative add of each Winch */
 	v.addAll(java.util.Arrays.asList(FTP4J.examples(u)));
+	v.addAll(java.util.Arrays.asList(ApacheCommonsNetSFTP.examples(u)));
 
 	return v.toArray(new String[0]);
     }
+
+
+    static private boolean _reg = false;
+    /**
+     * stub constructor for the WinchFactory() also appends/writes the system property "java.protocol.handler.pkgs" in accordance with http://docs.oracle.com/javase/7/docs/api/java/net/URL.html
+     *
+     * NOTE: my own code uses "package1:package2" whereas the example uses "package1|package2"
+     */
+    public WinchFactory()
+    {
+	if (false == _reg)
+	{
+	    java.util.Properties p = System.getProperties();
+
+            if ( (null == p.getProperty("java.protocol.handler.pkgs")) || (1 > p.getProperty("java.protocol.handler.pkgs").length()) )
+                p.setProperty("java.protocol.handler.pkgs","org.smallfoot.filexfer");
+            else
+                p.setProperty("java.protocol.handler.pkgs",p.getProperty("java.protocol.handler.pkgs")+"|org.smallfoot.filexfer");
+
+            System.setProperties(p);
+
+	    java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+
+	    _reg = true;
+	}
+    }
+
 
 
     public static void main(String[] args)
@@ -119,6 +149,7 @@ for (String s:t)
 
 for (FileTransferWinch f: w)
                     {
+System.out.println("trying winch: "+f.getClass().getName());
                         f.upload(g.getOptarg());
                         break;
                     }

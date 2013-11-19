@@ -214,6 +214,16 @@ public abstract class FileTransferWinch
         }
     }
 
+    int getPort()
+    {
+        return getPort(url);
+    }
+    static int getPort (java.net.URL u)
+    {
+        if (null == u) return -1;
+        return u.getPort();
+    }
+
     /**
      * convert a MD5 digest to a printable string.
      *

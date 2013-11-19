@@ -8,6 +8,7 @@ AT_CHECK([java -cp $abs_top_builddir/java/fctransfer.jar org.smallfoot.transfer.
 
 dnl check winches
 AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -L], 0, [     : ftp://scott:tiger@example.com/path/file
+     : sftp://scott:tiger@example.com/path/file
 ], [])
 
 dnl check winches

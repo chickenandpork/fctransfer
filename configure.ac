@@ -164,6 +164,27 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 
 
 
+AC_ARG_WITH(commons-net-ssh,
+[AS_HELP_STRING([--with-commons-net-ssh],[Enable inclusion of a commons-net-ssh .jar; default=svn co and build])],
+[
+AC_MSG_CHECKING([for getopt.jar])
+    case "$withval" in
+        "yes") WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | head -1) ;;
+        "no")  WITH_COMMONSNETSSHJAR=build  ;;
+        *) WITH_COMMONSNETSSHJAR="$withval" ;;
+    esac
+],
+[
+AC_MSG_CHECKING([for commons-net-ssh.jar])
+    WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | head -1) ;
+    if test -z "${WITH_COMMONSNETSSHJAR}"; then WITH_COMMONSNETSSHJAR=build; fi
+AC_MSG_RESULT([${WITH_COMMONSNETSSHJAR}])
+])
+AM_CONDITIONAL(BUILD_COMMONSNETSSHJAR, test "$WITH_COMMONSNETSSHJAR" = build)
+AC_SUBST([COMMONSNETSSHJAR], ${WITH_COMMONSNETSSHJAR})
+
+
+
 AC_CONFIG_FILES(Makefile
   depjars/Makefile 
   java/Makefile java/WinchFactory.java
