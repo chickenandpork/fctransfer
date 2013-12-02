@@ -23,7 +23,7 @@ public class WinchFactory
      * @throws java.net.MalformedURLException if the URL created form the String is malformed
      * @param url URL to connect to
      */
-    static FileTransferWinch getWinch(String url) throws java.net.MalformedURLException
+    public static FileTransferWinch getWinch(String url) throws java.net.MalformedURLException
     { return getWinch(new java.net.URL (url)); }
 
     /**
@@ -32,7 +32,7 @@ public class WinchFactory
      * @return populated winch based on the URL given
      * @param url URL to connect to
      */
-    static FileTransferWinch getWinch(java.net.URL url)
+    public static FileTransferWinch getWinch(java.net.URL url)
     {
         if (FTP4J.handles(url))
             return new FTP4J(url);
@@ -50,7 +50,7 @@ public class WinchFactory
      * @param url sample URL to be used in examples
      * @throws java.net.MalformedURLException if the given URL chokes on conversion to a java.net.URL
      */
-    static String[] getWinchExamples(String url) throws java.net.MalformedURLException
+    public static String[] getWinchExamples(String url) throws java.net.MalformedURLException
     {
         Vector<String> v = new Vector();
 
@@ -171,12 +171,12 @@ for (String s:t)
             case 'u': /* push a file */
                 try
                 {
-                    FileTransferWinch f1[] = null;
+                    //FileTransferWinch f1[] = null;
 
 for (FileTransferWinch f: winches)
                     {
                         System.out.println("trying winch: "+f.getClass().getName());
-                        f.upload(g.getOptarg());
+                        f.upload(g.getOptarg(), null);
                         break;
                     }
                 }
