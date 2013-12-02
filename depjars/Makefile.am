@@ -9,7 +9,7 @@ AM_JAVACFLAGS= -cp $(top_builddir)/$(subdir)/$(JAVAROOT)
 
 BUILDTMP=$(shell date +%s)
 
-JARS := commons-net-3.1.jar commons-lang3-3.1.jar ftp4j-1.7.1.jar  log4j-1.2.17.jar
+JARS := commons-net-3.1.jar commons-lang3-3.1.jar ftp4j-1.7.1.jar log4j-1.2.17.jar slf4j-simple-1.7.5.jar
 BUILT_SOURCES := $(JARS)
 
 if BUILD_COMMONSNETSSHJAR
@@ -21,14 +21,14 @@ endif
 	unzip -oj $< '*/$@' && touch $@
 
 commons-net-3.1-bin.zip:
-	test -f $${TMPDIR-/tmp}/$(@F) && untip -t $${TMPDIR-/tmp}/$(@F) > /dev/null || rm -f $${TMPDIR-/tmp}/$(@F)
+	test -f $${TMPDIR-/tmp}/$(@F) && unzip -t $${TMPDIR-/tmp}/$(@F) > /dev/null || rm -f $${TMPDIR-/tmp}/$(@F)
 	test -f $${TMPDIR-/tmp}/$(@F) && cp $${TMPDIR-/tmp}/$(@F) $@ || true
 	test -f $@ || curl -Lo $@ http://archive.apache.org/dist/commons/net/binaries/$(@F)
 	test -f $${TMPDIR-/tmp}/$(@F) || cp $@ $${TMPDIR-/tmp}/$(@F)
 	touch $@
 
 commons-lang3-3.1-bin.zip:
-	test -f $${TMPDIR-/tmp}/$(@F) && untip -t $${TMPDIR-/tmp}/$(@F) > /dev/null || rm -f $${TMPDIR-/tmp}/$(@F)
+	test -f $${TMPDIR-/tmp}/$(@F) && unzip -t $${TMPDIR-/tmp}/$(@F) > /dev/null || rm -f $${TMPDIR-/tmp}/$(@F)
 	test -f $${TMPDIR-/tmp}/$(@F) && cp $${TMPDIR-/tmp}/$(@F) $@ || true
 	test -f $@ || curl -Lo $@ http://archive.apache.org/dist/commons/lang/binaries/$(@F)
 	test -f $${TMPDIR-/tmp}/$(@F) || cp $@ $${TMPDIR-/tmp}/$(@F)

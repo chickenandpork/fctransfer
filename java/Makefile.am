@@ -29,9 +29,9 @@ $(notdir $(subdir)).jar: @PACKAGE@.jar @GETOPTJAR@ $(BUILT_SOURCES)
 	@mkdir -p $(@D)/.workdir
 	@echo "Manifest-Version: 1.0" > $(@D)/.workdir/MANIFEST.MF
 	@echo "Created-By: @PACKAGE@-@VERSION@" >> $(@D)/.workdir/MANIFEST.MF
-	echo "Main-Class: org.smallfoot.filexfer.FileTransferWinch"  >> $(@D)/.workdir/MANIFEST.MF
+	echo "Main-Class: org.smallfoot.filexfer.FileTransferWinch" >> $(@D)/.workdir/MANIFEST.MF
 	ln -f $^ $(@D)/.workdir/
-	for i in $(^F) ; do case $$i in javaroot.stamp) ;; *) (cd $(@D)/.workdir  && jar xf $$i) ;; esac; done
+	for i in $(^F) ; do case $$i in javaroot.stamp) ;; *) (cd $(@D)/.workdir && jar xf $$i) ;; esac; done
 	(cd $(@D)/.workdir && jar cm MANIFEST.MF org) > $@
 	rm -fr $(@D)/.workdir
 
