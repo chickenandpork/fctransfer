@@ -11,6 +11,7 @@ config.sub
 configure
 install-sh
 missing
+.workdir
 
 
 # Package Files #

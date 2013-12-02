@@ -21,7 +21,10 @@ public abstract class FileTransferWinch
      * @param url a sample URL showing user/pass/pathname
      * @returns array of examples using that URL
      */
-    public static String[] examples(java.net.URL url) { return "".split(";"); }
+    public static String[] examples(java.net.URL url)
+    {
+        return "".split(";");
+    }
 
     /** upload a file using this FileTransferWinch; errors in upload are handled via Exceptions
      *

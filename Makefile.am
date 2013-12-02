@@ -43,7 +43,7 @@ doc: Doxyfile
 endif
 
 if DO_ASTYLE
-formatting: java/FTP4J.java java/FileTransferWinch.java java/WinchFactory.java.in java/version.java.in
+formatting: java/FTP4J.java java/FileTransferWinch.java java/WinchFactory.java.in java/version.java.in java/ApacheCommonsNetSFTP.java
 if DO_GITFORMATTING
 	@git ls-files --other --exclude-standard --directory || { echo "###################### unignored local files: git add, git commit ?"; }
 	@git diff --exit-code || { echo "###################### unstaged changes: git commit -a"; exit 1; }

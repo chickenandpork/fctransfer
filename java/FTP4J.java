@@ -32,10 +32,10 @@ public class FTP4J extends FileTransferWinch
      */
     public static String[] examples(java.net.URL url)
     {
-	return new String[]
-	{
-	    url.toString().replaceFirst("^[a-zA-Z0-9]+:","ftp:")
-	};
+        return new String[]
+               {
+                   url.toString().replaceFirst("^[a-zA-Z0-9]+:","ftp:")
+               };
     }
 
 

@@ -52,10 +52,10 @@ public class ApacheCommonsNetSFTP extends FileTransferWinch
      */
     public static String[] examples(java.net.URL url)
     {
-	return new String[]
-	{
-	    url.toString().replaceFirst("^[a-zA-Z0-9]+:","sftp:")
-	};
+        return new String[]
+               {
+                   url.toString().replaceFirst("^[a-zA-Z0-9]+:","sftp:")
+               };
     }
 
 
@@ -104,9 +104,9 @@ public class ApacheCommonsNetSFTP extends FileTransferWinch
             throw new FileTransferWinchException ("I/O Error reading local file", ioe);
         }
 
-	String targetPath = getPath();
-	if ( (null == targetPath) || (0 == targetPath.length()) )
-	    targetPath = ".";
+        String targetPath = getPath();
+        if ( (null == targetPath) || (0 == targetPath.length()) )
+            targetPath = ".";
 
         String checksumnote = "# MD5 checksum (see RFC-1321)\n"
                               + "# Verify using: \n"
@@ -132,82 +132,82 @@ public class ApacheCommonsNetSFTP extends FileTransferWinch
         {
             ssh.loadKnownHosts();
 
-System.out.println ("connecting to "+getHost() +" port "+getPort()+ " to transfer "+ file.getName());
+//System.out.println ("connecting to "+getHost() +" port "+getPort()+ " to transfer "+ file.getName());
             ssh.connect(getHost());
-System.out.println ("authorizing to "+getHost()+" using \""+getUser()+"\", \""+getPass()+"\"");
+//System.out.println ("authorizing to "+getHost()+" using \""+getUser()+"\", \""+getPass()+"\"");
             if ( (null != getPass()) && (getPass().length() > 0) )
-	    {
-System.out.println ("authorizing u p");
-		/* lacking a java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider()); the following line simply generates a org.apache.commons.net.ssh.userauth.UserAuthException */
-		ssh.authPassword(getUser(),getPass());
-System.out.println ("authorized u p");
-	    }
-	    else
-	    {
-System.out.println ("authorizing u k");
+            {
+//System.out.println ("authorizing u p");
+                /* lacking a java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider()); the following line simply generates a org.apache.commons.net.ssh.userauth.UserAuthException */
+                ssh.authPassword(getUser(),getPass());
+//System.out.println ("authorized u p");
+            }
+            else
+            {
+//System.out.println ("authorizing u k");
                 ssh.authPublickey(getUser());
-System.out.println ("authorized u k");
-	    }
+//System.out.println ("authorized u k");
+            }
 
-System.out.println ("uploading " + file.getName());
+//System.out.println ("uploading " + file.getName());
 
 
-File temp = File.createTempFile(file.getName(), ".tmp");
-System.out.println ("created " + temp.getAbsolutePath());
-java.io.FileOutputStream tempo = new java.io.FileOutputStream(temp);
-tempo.write(checksumnote.getBytes(), 0, checksumnote.length());
-tempo.write(checksumline.getBytes(), 0, checksumline.length());
-tempo.flush();
+            File temp = File.createTempFile(file.getName(), ".tmp");
+//System.out.println ("created " + temp.getAbsolutePath());
+            java.io.FileOutputStream tempo = new java.io.FileOutputStream(temp);
+            tempo.write(checksumnote.getBytes(), 0, checksumnote.length());
+            tempo.write(checksumline.getBytes(), 0, checksumline.length());
+            tempo.flush();
             ssh.newSFTPClient().put(temp.getAbsolutePath(), targetPath/* getPath()+file.getName()+".sum" */);
-tempo.close();
-if (!temp.delete()) temp.deleteOnExit();
+            tempo.close();
+            if (!temp.delete()) temp.deleteOnExit();
             ssh.newSFTPClient().put(file.getName(), targetPath /* getPath()+file.getName() */ );
             //it.sauronsoftware.ftp4j.FTPReply reply = client.sendCustomCommand("XMD5 \""+file.getName()+"\"");
             ssh.disconnect();
 
             //System.out.println ("MD5 (XMD5): server offers no checksum, so you're on your own...");
-                return false;
+            return false;
 
         }
         catch (org.apache.commons.net.ssh.userauth.UserAuthException uae)
         {
-	    throw new FileTransferWinchException("Authentication failure: "+uae);
+            throw new FileTransferWinchException("Authentication failure: "+uae);
         }
         catch (java.io.IOException ioe)
         {
-ioe.printStackTrace();
+            ioe.printStackTrace();
             throw new FileTransferIllegalFSMReplyException("Uploading " + file.getName() + ": IO Error: " + ioe.getMessage(), ioe);
         }
-/*
-        catch (it.sauronsoftware.ftp4j.FTPIllegalReplyException fire)
+        /*
+                catch (it.sauronsoftware.ftp4j.FTPIllegalReplyException fire)
+                {
+                    throw new FileTransferIllegalFSMReplyException("Uploading " + file.getName() + ": (FSM) Illegal FTP response: " + fire.getMessage(), fire);
+                }
+                catch (it.sauronsoftware.ftp4j.FTPException fe)
+                {
+                    throw new FileTransferDataTransferException("Uploading " + file.getName() + ": (xFTE) Illegal FTP response: " + fe.getMessage(), fe);
+                }
+                catch (it.sauronsoftware.ftp4j.FTPDataTransferException fdte)
+                {
+                    throw new FileTransferDataTransferException("Uploading " + file.getName() + ": (DTE) Illegal FTP response: " + fdte.getMessage(), fdte);
+                }
+                catch (it.sauronsoftware.ftp4j.FTPAbortedException fae)
+                {
+                    throw new FileTransferDataTransferException("Uploading " + file.getName() + ": FTP aborted: " + fae.getMessage(), fae);
+                }
+        */
+        finally
         {
-            throw new FileTransferIllegalFSMReplyException("Uploading " + file.getName() + ": (FSM) Illegal FTP response: " + fire.getMessage(), fire);
+            if (ssh.isConnected())
+                try
+                {
+                    ssh.disconnect();
+                }
+                catch (java.io.IOException ioe)
+                {
+                    throw new FileTransferWinchException("tearing down ssh connection under exception", ioe);
+                }
         }
-        catch (it.sauronsoftware.ftp4j.FTPException fe)
-        {
-            throw new FileTransferDataTransferException("Uploading " + file.getName() + ": (xFTE) Illegal FTP response: " + fe.getMessage(), fe);
-        }
-        catch (it.sauronsoftware.ftp4j.FTPDataTransferException fdte)
-        {
-            throw new FileTransferDataTransferException("Uploading " + file.getName() + ": (DTE) Illegal FTP response: " + fdte.getMessage(), fdte);
-        }
-        catch (it.sauronsoftware.ftp4j.FTPAbortedException fae)
-        {
-            throw new FileTransferDataTransferException("Uploading " + file.getName() + ": FTP aborted: " + fae.getMessage(), fae);
-        }
-*/
-	finally
-	{
-	    if (ssh.isConnected())
-		try
-		{
-		    ssh.disconnect();
-		}
-		catch (java.io.IOException ioe)
-        	{
-		    throw new FileTransferWinchException("tearing down ssh connection under exception", ioe);
-		}
-	}
     }
 
     // static

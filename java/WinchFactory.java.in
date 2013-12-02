@@ -52,15 +52,15 @@ public class WinchFactory
      */
     static String[] getWinchExamples(String url) throws java.net.MalformedURLException
     {
-	Vector<String> v = new Vector();
+        Vector<String> v = new Vector();
 
-	java.net.URL u = new java.net.URL(url);
+        java.net.URL u = new java.net.URL(url);
 
-	/* manual iterative add of each Winch */
-	v.addAll(java.util.Arrays.asList(FTP4J.examples(u)));
-	v.addAll(java.util.Arrays.asList(ApacheCommonsNetSFTP.examples(u)));
+        /* manual iterative add of each Winch */
+        v.addAll(java.util.Arrays.asList(FTP4J.examples(u)));
+        v.addAll(java.util.Arrays.asList(ApacheCommonsNetSFTP.examples(u)));
 
-	return v.toArray(new String[0]);
+        return v.toArray(new String[0]);
     }
 
 
@@ -69,8 +69,8 @@ public class WinchFactory
     {
         java.util.Vector<FileTransferWinch> w = new java.util.Vector();
 
-	w.add(new FTP4J(null));
-	w.add(new ApacheCommonsNetSFTP(null));
+        w.add(new FTP4J(null));
+        w.add(new ApacheCommonsNetSFTP(null));
 
         return w;
     }
@@ -84,9 +84,9 @@ public class WinchFactory
      */
     public WinchFactory()
     {
-	if (false == _reg)
-	{
-	    java.util.Properties p = System.getProperties();
+        if (false == _reg)
+        {
+            java.util.Properties p = System.getProperties();
 
             if ( (null == p.getProperty("java.protocol.handler.pkgs")) || (1 > p.getProperty("java.protocol.handler.pkgs").length()) )
                 p.setProperty("java.protocol.handler.pkgs","org.smallfoot.filexfer");
@@ -95,10 +95,10 @@ public class WinchFactory
 
             System.setProperties(p);
 
-	    java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 
-	    _reg = true;
-	}
+            _reg = true;
+        }
     }
 
 
@@ -109,9 +109,14 @@ public class WinchFactory
         java.util.Vector<FileTransferWinch> winches = new java.util.Vector();
         Getopt g = new Getopt("upload", args, "U:u:lL");
 
-try {
-java.lang.ClassLoader.getSystemClassLoader().loadClass("org.slf4j.impl.StaticLoggerBinder");
-} catch (Exception e) { e.printStackTrace(); }
+        try
+        {
+            java.lang.ClassLoader.getSystemClassLoader().loadClass("org.slf4j.impl.StaticLoggerBinder");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         int c;
         while ((c = g.getopt()) != -1)
@@ -120,10 +125,15 @@ java.lang.ClassLoader.getSystemClassLoader().loadClass("org.slf4j.impl.StaticLog
             {
             case 'L': /* list winches' examples */
             {
-		try {
-		    for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
-		        System.out.println("     : "+s);
-		} catch (java.net.MalformedURLException mue) { /* URL string "http://scott:tiger@example.com/path/file" is no good */ }
+                try
+                {
+for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
+                        System.out.println("     : "+s);
+                }
+                catch (java.net.MalformedURLException mue)
+                {
+                    /* URL string "http://scott:tiger@example.com/path/file" is no good */
+                }
             }
             break;
 
@@ -165,7 +175,7 @@ for (String s:t)
 
 for (FileTransferWinch f: winches)
                     {
-System.out.println("trying winch: "+f.getClass().getName());
+                        System.out.println("trying winch: "+f.getClass().getName());
                         f.upload(g.getOptarg());
                         break;
                     }
@@ -187,7 +197,8 @@ System.out.println("trying winch: "+f.getClass().getName());
 //import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
                 java.security.Provider p[] = java.security.Security.getProviders();
-                for (int i = 0; i < p.length; i++) {
+                for (int i = 0; i < p.length; i++)
+                {
                     System.out.println(p[i]);
                     for (java.util.Enumeration<?> e = p[i].keys(); e.hasMoreElements();)
                         System.out.println("\t" + e.nextElement());

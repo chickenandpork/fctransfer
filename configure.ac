@@ -149,14 +149,14 @@ AC_ARG_WITH(getoptplus,
 [AS_HELP_STRING([--with-getoptplus],[Enable inclusion of an improved getopt .jar; default=search])],
 [
     case "$withval" in
-        "yes") WITH_GETOPTJAR=$((locate getopt.jar) | head -1) ;;
+        "yes") WITH_GETOPTJAR=$((locate getopt.jar) | grep -v .workdir | head -1) ;;
         "no")  WITH_GETOPTJAR=no  ;;
         *) WITH_GETOPTJAR="$withval" ;;
     esac
 ],
 [
 AC_MSG_CHECKING([for getopt.jar])
-    WITH_GETOPTJAR=$((locate getopt.jar) | head -1) ;
+    WITH_GETOPTJAR=$((locate getopt.jar) | grep -v .workdir | head -1) ;
 AC_MSG_RESULT([${WITH_GETOPTJAR}])
 ])
 AM_CONDITIONAL(DO_GETOPTJAR, test "$WITH_GETOPTJAR" != no)
@@ -169,14 +169,14 @@ AC_ARG_WITH(commons-net-ssh,
 [
 AC_MSG_CHECKING([for getopt.jar])
     case "$withval" in
-        "yes") WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | head -1) ;;
+        "yes") WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | grep -v .workdir | head -1) ;;
         "no")  WITH_COMMONSNETSSHJAR=build  ;;
         *) WITH_COMMONSNETSSHJAR="$withval" ;;
     esac
 ],
 [
 AC_MSG_CHECKING([for commons-net-ssh.jar])
-    WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | head -1) ;
+    WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | grep -v .workdir | head -1) ;
     if test -z "${WITH_COMMONSNETSSHJAR}"; then WITH_COMMONSNETSSHJAR=build; fi
 AC_MSG_RESULT([${WITH_COMMONSNETSSHJAR}])
 ])
