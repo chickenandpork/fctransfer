@@ -104,6 +104,10 @@ public class ApacheCommonsNetSFTP extends FileTransferWinch
             throw new FileTransferWinchException ("I/O Error reading local file", ioe);
         }
 
+	String targetPath = getPath();
+	if ( (null == targetPath) || (0 == targetPath.length()) )
+	    targetPath = ".";
+
         String checksumnote = "# MD5 checksum (see RFC-1321)\n"
                               + "# Verify using: \n"
                               + "#   Windows:\n"
@@ -128,7 +132,7 @@ public class ApacheCommonsNetSFTP extends FileTransferWinch
         {
             ssh.loadKnownHosts();
 
-System.out.println ("connecting to "+file.getName()+" port "+getPort());
+System.out.println ("connecting to "+getHost() +" port "+getPort()+ " to transfer "+ file.getName());
             ssh.connect(getHost());
 System.out.println ("authorizing to "+getHost()+" using \""+getUser()+"\", \""+getPass()+"\"");
             if ( (null != getPass()) && (getPass().length() > 0) )
@@ -149,14 +153,15 @@ System.out.println ("uploading " + file.getName());
 
 
 File temp = File.createTempFile(file.getName(), ".tmp");
+System.out.println ("created " + temp.getAbsolutePath());
 java.io.FileOutputStream tempo = new java.io.FileOutputStream(temp);
 tempo.write(checksumnote.getBytes(), 0, checksumnote.length());
 tempo.write(checksumline.getBytes(), 0, checksumline.length());
 tempo.flush();
+            ssh.newSFTPClient().put(temp.getAbsolutePath(), targetPath/* getPath()+file.getName()+".sum" */);
 tempo.close();
-            ssh.newSFTPClient().put(temp.getName(), getPath()+"/"+file.getName()+".sum");
 if (!temp.delete()) temp.deleteOnExit();
-            ssh.newSFTPClient().put(file.getName(), getPath()+"/"+file.getName());
+            ssh.newSFTPClient().put(file.getName(), targetPath /* getPath()+file.getName() */ );
             //it.sauronsoftware.ftp4j.FTPReply reply = client.sendCustomCommand("XMD5 \""+file.getName()+"\"");
             ssh.disconnect();
 
@@ -170,6 +175,7 @@ if (!temp.delete()) temp.deleteOnExit();
         }
         catch (java.io.IOException ioe)
         {
+ioe.printStackTrace();
             throw new FileTransferIllegalFSMReplyException("Uploading " + file.getName() + ": IO Error: " + ioe.getMessage(), ioe);
         }
 /*

@@ -64,6 +64,18 @@ public class WinchFactory
     }
 
 
+
+    protected java.util.Vector<FileTransferWinch> getWinches()
+    {
+        java.util.Vector<FileTransferWinch> w = new java.util.Vector();
+
+	w.add(new FTP4J(null));
+	w.add(new ApacheCommonsNetSFTP(null));
+
+        return w;
+    }
+
+
     static private boolean _reg = false;
     /**
      * stub constructor for the WinchFactory() also appends/writes the system property "java.protocol.handler.pkgs" in accordance with http://docs.oracle.com/javase/7/docs/api/java/net/URL.html
@@ -94,8 +106,12 @@ public class WinchFactory
     public static void main(String[] args)
     {
         WinchFactory wf = new WinchFactory();
-        java.util.Vector<FileTransferWinch> w = new java.util.Vector();
+        java.util.Vector<FileTransferWinch> winches = new java.util.Vector();
         Getopt g = new Getopt("upload", args, "U:u:lL");
+
+try {
+java.lang.ClassLoader.getSystemClassLoader().loadClass("org.slf4j.impl.StaticLoggerBinder");
+} catch (Exception e) { e.printStackTrace(); }
 
         int c;
         while ((c = g.getopt()) != -1)
@@ -114,7 +130,7 @@ public class WinchFactory
             case 'l': /* list winches */
             {
                 TreeSet<String> t = new TreeSet();
-for (FileTransferWinch f: w)
+for (FileTransferWinch f: wf.getWinches())
                     t.add(f.getClass().getName().replaceAll("^.*\\.",""));
 for (String s:t)
                     System.out.println("winch: "+s);
@@ -126,7 +142,7 @@ for (String s:t)
                 {
                     FileTransferWinch ftw = wf.getWinch(g.getOptarg());
                     if (null != ftw)
-                        w.add(ftw);
+                        winches.add(ftw);
                     else System.out.println("No uploader \"winch\" found for url \""+g.getOptarg()+"\"");
                 }
                 catch (java.net.MalformedURLException mue)
@@ -147,7 +163,7 @@ for (String s:t)
                 {
                     FileTransferWinch f1[] = null;
 
-for (FileTransferWinch f: w)
+for (FileTransferWinch f: winches)
                     {
 System.out.println("trying winch: "+f.getClass().getName());
                         f.upload(g.getOptarg());
@@ -163,6 +179,19 @@ System.out.println("trying winch: "+f.getClass().getName());
             default:
                 System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
                 System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
+
+//import java.security.Provider;
+//import java.security.Security;
+//import java.util.Enumeration;
+
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
+                java.security.Provider p[] = java.security.Security.getProviders();
+                for (int i = 0; i < p.length; i++) {
+                    System.out.println(p[i]);
+                    for (java.util.Enumeration<?> e = p[i].keys(); e.hasMoreElements();)
+                        System.out.println("\t" + e.nextElement());
+                }
                 break;
             }
         }

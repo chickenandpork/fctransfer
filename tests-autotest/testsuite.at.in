@@ -12,7 +12,18 @@ AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -L], 0, [     : ftp://scott
 ], [])
 
 dnl check winches
-AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -l], 0, [], [])
+AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -l], 0, [winch: ApacheCommonsNetSFTP
+winch: FTP4J
+], [])
+
+AT_CLEANUP()
+
+
+
+AT_SETUP(list local providers)
+dnl      --------------------
+
+
 
 AT_CLEANUP()
 
