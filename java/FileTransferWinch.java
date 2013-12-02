@@ -137,7 +137,7 @@ public abstract class FileTransferWinch
     };
 
 
-    String getHost()
+    public String getHost()
     {
         return getHost(url);
     }
@@ -147,7 +147,7 @@ public abstract class FileTransferWinch
         else return u.getHost();
     }
 
-    String getPass()
+    public String getPass()
     {
         return getPass(url);
     }
@@ -175,7 +175,7 @@ public abstract class FileTransferWinch
         }
     }
 
-    String getUser()
+    public String getUser()
     {
         return getUser(url);
     }
@@ -199,7 +199,7 @@ public abstract class FileTransferWinch
         }
     }
 
-    String getPath()
+    public String getPath()
     {
         return getPath(url);
     }

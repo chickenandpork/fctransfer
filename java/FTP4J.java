@@ -149,6 +149,25 @@ public class FTP4J extends FileTransferWinch
             throw new FileTransferDataTransferException("Uploading " + file.getName() + ": FTP aborted: " + fae.getMessage(), fae);
         }
     }
+
+    public String getPass()
+    {
+	if (null == super.getUser(url))	/* implying anonymous user */
+	    return "fctransfer@github.com";
+	else
+	    return super.getPass(url);
+    }
+
+    public String getUser()
+    {
+	String res = super.getUser(url);
+
+	if (null == res)
+	    return "anonymous";
+	else
+	    return res;
+    }
+
 }
 
 
