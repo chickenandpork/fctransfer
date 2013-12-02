@@ -2,11 +2,11 @@ package org.smallfoot.filexfer;
 
 import it.sauronsoftware.ftp4j.*;
 import java.io.*;
+import java.util.Vector;
 
 public class FTP4J extends FileTransferWinch
 {
     FTPClient proxy = null;
-    java.util.Vector<String> uploadNotify = null;
 
     public static boolean handles (java.net.URL u)
     {
@@ -60,9 +60,10 @@ public class FTP4J extends FileTransferWinch
      * Where possible, a manifest XML file is sent (my hostname, my user ID, any tasks or objectives, etc)
      *
      * @param file filename to upload
+     * @param uploadNotify array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file
      * @return "OK, ##", "FAIL, ##", "UNKNOWN" based on results (where "##" is a line number of variable length)
      */
-    public boolean upload(File file) throws FileTransferWinchException
+    public boolean upload(File file, Vector<String> uploadNotify) throws FileTransferWinchException
     {
         String checksum = null;
 

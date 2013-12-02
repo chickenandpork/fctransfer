@@ -1,6 +1,7 @@
 package org.smallfoot.filexfer;
 
 import java.io.*;
+import java.util.Vector;
 
 public abstract class FileTransferWinch
 {
@@ -29,18 +30,20 @@ public abstract class FileTransferWinch
     /** upload a file using this FileTransferWinch; errors in upload are handled via Exceptions
      *
      * @param file the content to upload
+     * @param uploadNotify array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file
      * @returns true if upload was checksum-certified; false is such facility isn't available (error if checksum is available and mismatches)
      */
-    public abstract boolean upload(File file) throws FileTransferWinchException;
+    public abstract boolean upload(File file, Vector<String> uploadNotify) throws FileTransferWinchException;
 
     /** upload a file using this FileTransferWinch; errors in upload are handled via Exceptions
      *
      * @param file the content to upload
+     * @param uploadNotify array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file
      * @returns true if upload was checksum-certified; false is such facility isn't available (error if checksum is available and mismatches)
      */
-    public boolean upload(String file) throws FileTransferWinchException
+    public boolean upload(String file, Vector<String> uploadNotify) throws FileTransferWinchException
     {
-        return upload(new java.io.File(file));
+        return upload(new java.io.File(file), uploadNotify);
     }
 
     /** A base collector exception: "there was some exception in the FileTransferWinch class"; typically, more meaning and/or usefulness is reached by catching specific subclasses of this exception */
