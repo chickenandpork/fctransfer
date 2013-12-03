@@ -94,8 +94,7 @@ public class WinchFactory
                 p.setProperty("java.protocol.handler.pkgs",p.getProperty("java.protocol.handler.pkgs")+"|org.smallfoot.filexfer");
 
             System.setProperties(p);
-
-            java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            org.apache.commons.net.ssh.util.SecurityUtils.isBouncyCastleRegistered();
 
             _reg = true;
         }
