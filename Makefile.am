@@ -9,7 +9,7 @@ ACLOCAL_AMFLAGS = -I m4
 
 # if missing mkinstalldirs install-sh trigger errors, ignore the result code on the "system (cp ...)" command in automake
 dnl CONFIG_CLEAN_FILES = aclocal.m4 config.guess config.sub config.h config.h.in ltconfig ltmain.sh missing mkinstalldirs install-sh Doxyfile @PACKAGE@.spec @PACKAGE@.jar changes.atom
-EXTRA_DIST = @PACKAGE@.spec
+EXTRA_DIST = @PACKAGE@.spec gitdescribe
 
 
 
@@ -56,7 +56,13 @@ if DO_GITFORMATTING
 	git commit -a -m 'formatting and whitespace'
 endif DO_GITFORMATTING
 
-endif
+endif DO_ASTYLE
+
+if DO_GITFORMATTING
+gitdescribe: .git/ORIG_HEAD
+	git describe > $@
+endif DO_GITFORMATTING
+
 
 if HAVE_RPMBUILD
 rpm: dist-bzip2

@@ -87,8 +87,8 @@ AM_CONDITIONAL(HAVE_RPMBUILD, [test "x$RPMBUILD" != "xmissing rpmbuild"])
 
 AC_PATH_PROGS(GIT, [git], [missing])
 AC_MSG_CHECKING([version agreement with git tag])
-BUILDID=$(git describe| cut -d "-" -f 2)
-CHKVER=$(git describe| cut -d "-" -f 1)
+BUILDID=$( (git describe; cat gitdescribe) 2>/dev/null |head -1| cut -d "-" -f 2)
+CHKVER=$( (git describe; cat gitdescribe) 2>/dev/null |head -1| cut -d "-" -f 1)
 if test "${CHKVER}" = "${VERSION}"
 then 
   AC_MSG_RESULT([ok])

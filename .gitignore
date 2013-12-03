@@ -12,6 +12,7 @@ configure
 install-sh
 missing
 .workdir
+gitdescribe
 
 
 # Package Files #
