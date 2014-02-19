@@ -56,7 +56,7 @@ AC_SUBST([XMLLINTINDENT], ${WITH_XMLLINTINDENT})
 AC_PATH_PROGS(XSLTPROC, [xsltproc], [missing xsltproc])
 AC_PATH_PROGS(TIDY, [tidy], [missing tidy])
 AC_PATH_PROGS(BZCAT, [bzcat], [missing bzcat])
-AC_PATH_PROGS(SEVENZIP, [7za], [missing 7za])
+AC_PATH_PROGS(SEVENZIP, [7za 7z keka7z], [missing 7za], $PATH:/Applications/Keka.app/Contents/Resources)
 AC_PATH_PROGS(FILE, [file], [missing file])
 AC_ARG_WITH(doxygen,
 [AS_HELP_STRING([--with-doxygen],[Indicate Doxygen allowing a without-; (default=search)])],
