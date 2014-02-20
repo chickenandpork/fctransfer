@@ -38,9 +38,21 @@ BUILT_SOURCES =
 
 
 if DO_DOXYGEN
-doc: Doxyfile
+doc: htdocs/README.dox Doxyfile
 	$(DOXYGEN)
+	@if test \! -d $(<D)/.git; then echo "subdir $(<D) not set as a gh-pages branch; see http://rickfoosusa.blogspot.com/2011/10/howto-use-doxygen-with-github.html"; git branch|grep gh-pages || echo git clone --branch gh-pages $$(git config --get remote.origin.url) $(<D); grep $(<D) .gitignore || echo "echo $(<D) > .gitignore"; echo "then delete everything in $(<D), commit, and push"; exit 1; fi
+	@grep $(<D) .gitignore || { echo "echo $(<D) > .gitignore"; exit 1; }
+	(cd $(<D) && git add -A)
+	if test -n "$(DOXYMESSAGE)" ; then (cd $(<D) && git commit -a -m "$(DOXYMESSAGE)" && git push); fi
+
+htdocs/README.dox: README.md Makefile
+if DO_DOXYGEN_MD
+	awk 'BEGIN { print "@file "; print "@mainpage JavaDoc API Markup for @PACKAGE@"; } { printf "%s\n",$$0; } END {print "" }' $< > $@
+else
+	awk 'BEGIN { print "/** @file "; print "@mainpage JavaDoc API Markup for @PACKAGE@"; } /@PACKAGE@$$/ {next} /^=+$$/ {next} { printf " * %s\n",$$0; } END {print " */" }' $< > $@
+endif DO_DOXYGEN_MD_FALSE
 endif
+
 
 if DO_ASTYLE
 formatting: java/FTP4J.java java/FileTransferWinch.java java/WinchFactory.java.in java/version.java.in java/ApacheCommonsNetSFTP.java

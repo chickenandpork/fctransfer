@@ -6,7 +6,7 @@ package org.smallfoot.filexfer;
 //import javax.activation.DataSource;
 //import javax.activation.URLDataSource;
 import gnu.getopt.Getopt;
-//import gnu.getopt.LongOpt;
+import gnu.getopt.LongOpt;
 import java.util.TreeSet;
 import java.util.Vector;
 
@@ -106,7 +106,6 @@ public class WinchFactory
     {
         WinchFactory wf = new WinchFactory();
         java.util.Vector<FileTransferWinch> winches = new java.util.Vector();
-        Getopt g = new Getopt("upload", args, "U:u:lL");
 
         try
         {
@@ -116,6 +115,29 @@ public class WinchFactory
         {
             e.printStackTrace();
         }
+
+        java.util.Vector<LongOpt> options = new java.util.Vector(6,2);
+
+        /* Always always ALWAYS provide a quick reference and a version output */
+        //options.add(new LongOpt("help", LongOpt.NO_ARGUMENT, null, 'H'));
+        //options.add(new LongOpt("version", LongOpt.NO_ARGUMENT, null, 'V'));
+
+        options.add(new LongOpt("uploadurl", LongOpt.REQUIRED_ARGUMENT, null, 'U'));
+        options.add(new LongOpt("upload", LongOpt.REQUIRED_ARGUMENT, null, 'u'));
+        options.add(new LongOpt("list", LongOpt.NO_ARGUMENT, null, 'l'));
+        options.add(new LongOpt("listwinchexamples", LongOpt.NO_ARGUMENT, null, 'L'));
+
+        /* the following two @DO_GETOPTJAR... stuff causes either one or the other line's comment
+         * termination to get bombed out -- effectively causing the comment block to continue to
+         * the end of the line, where a comment brace awaits to trap the unterminated comment.
+         * Somewhat like a cartoon rabbit-trap made of a box baited with a carrot, but this trap
+         * causes either one or the other "Getopt g = ..." to be uncommented, effectively honouring
+         * the configure-level --with-getoptjar option at compile-time (well, config.status
+         * -triggered compiler-parser-time)
+         */
+
+        /* *@DO_GETOPTJAR_TRUE@/        Getopt g = new org.smallfoot.getopt.GetOpt("upload", args, options);        /* */
+        /* *@DO_GETOPTJAR_FALSE@/        Getopt g = new gnu.getopt.Getopt("upload", args, "U:u:lL", options);        /* */
 
         int c;
         while ((c = g.getopt()) != -1)
