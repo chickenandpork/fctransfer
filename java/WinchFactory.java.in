@@ -1,10 +1,6 @@
 /* smallfoot.org is owned by allan.clark */
 package org.smallfoot.filexfer;
 
-//import java.io.*;
-//import java.util.*;
-//import javax.activation.DataSource;
-//import javax.activation.URLDataSource;
 import gnu.getopt.Getopt;
 import gnu.getopt.LongOpt;
 import java.util.TreeSet;
@@ -12,6 +8,13 @@ import java.util.Vector;
 
 /**
  * @file
+ */
+
+/**
+ * WinchFactory is the main entry point for this package; WinchFactory.main() shows how a filetransfer "winch" can be found for a URL, but in general a consumer of this class wants to:
+ *   1. use getWinch(String) to find an appropriate winch for a URL
+ *   2. exercise the winch using FileTransferWinch.upload(File) or FileTransferWinch.upload(String)
+ *   3. reap the rewards of not having to re-code this functionality
  */
 
 public class WinchFactory
@@ -136,8 +139,8 @@ public class WinchFactory
          * -triggered compiler-parser-time)
          */
 
-        /* *@DO_GETOPTJAR_TRUE@/        Getopt g = new org.smallfoot.getopt.GetOpt("upload", args, options);        /* */
-        /* *@DO_GETOPTJAR_FALSE@/        Getopt g = new gnu.getopt.Getopt("upload", args, "U:u:lL", options);        /* */
+        /* *@DO_GETOPTJAR_TRUE@/        Getopt g = new org.smallfoot.getopt.GetOpt("upload", args, options);        /*@DO_GETOPTJAR_TRUE@ */
+        /* *@DO_GETOPTJAR_FALSE@/        Getopt g = new gnu.getopt.Getopt("upload", args, "U:u:lL", options);        /@DO_GETOPTJAR_FALSE@* */
 
         int c;
         while ((c = g.getopt()) != -1)
@@ -210,12 +213,6 @@ for (FileTransferWinch f: winches)
             default:
                 System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
                 System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
-
-//import java.security.Provider;
-//import java.security.Security;
-//import java.util.Enumeration;
-
-//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
                 java.security.Provider p[] = java.security.Security.getProviders();
                 for (int i = 0; i < p.length; i++)
