@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="FTP4J_8java" kind="file">
+    <compoundname>FTP4J.java</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" prot="public">org::smallfoot::filexfer::FTP4J</innerclass>
+    <innernamespace refid="namespaceit_1_1sauronsoftware_1_1ftp4j">it::sauronsoftware::ftp4j</innernamespace>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1filexfer">org::smallfoot::filexfer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/fctransfer/java/FTP4J.java"/>
+  </compounddef>
+</doxygen>

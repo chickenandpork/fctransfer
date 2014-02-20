@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::sftp::SFTPURLConnection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">URLConnection</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ab5999bb91c95b814ef94814285794a36" prot="package" static="no" mutable="no">
+        <type>SSHClient</type>
+        <definition>SSHClient ssh</definition>
+        <argsstring></argsstring>
+        <name>ssh</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="20" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a31333738e73c420407fe864e744eb5e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SFTPURLConnection</definition>
+        <argsstring>(java.net.URL url)</argsstring>
+        <name>SFTPURLConnection</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="22" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a1396bf9b5defe9fa844a63b5cd40ac0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void connect</definition>
+        <argsstring>()</argsstring>
+        <name>connect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="60" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="60" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a0924d1107a459be632532ef34324494e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.io.InputStream</type>
+        <definition>java.io.InputStream getInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>getInputStream</name>
+        <briefdescription>
+<para>Stubbed, because there&apos;s nothing to send us. </para>        </briefdescription>
+        <detaileddescription>
+<para>Oh how did I get caught in the &quot;Royal &apos;We&apos;&quot; ? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="55" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a4170f42681efaf92df5c2030f5298905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.io.OutputStream</type>
+        <definition>java.io.OutputStream getOutputStream</definition>
+        <argsstring>()</argsstring>
+        <name>getOutputStream</name>
+        <briefdescription>
+<para>Stubbed, because there&apos;s nothing to send us. </para>        </briefdescription>
+        <detaileddescription>
+<para>Oh how did I get caught in the &quot;Royal &apos;We&apos;&quot; ? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="47" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1aa608e58be69b0389d82d846a25091d36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setContentType</definition>
+        <argsstring>(String ignored)</argsstring>
+        <name>setContentType</name>
+        <param>
+          <type>String</type>
+          <declname>ignored</declname>
+        </param>
+        <briefdescription>
+<para>Stubbed, because there&apos;s no change we want to accept yet. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sorry, apparently &quot;at this time&quot; is more professional, if you listen to the wordy airport announcements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ignored</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="42" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ac2f45f32dfcaef408189cabb2644841c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setRequestHeader</definition>
+        <argsstring>(String name, String value)</argsstring>
+        <name>setRequestHeader</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Stubbed, because there&apos;s no change we want to accept yet. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sorry, apparently &quot;at this time&quot; is more professional, if you listen to the wordy airport announcements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="35" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="109">
+        <label>SFTPURLConnection</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>URLConnection</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="111">
+        <label>SFTPURLConnection</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="113" relation="usage">
+          <edgelabel>ssh</edgelabel>
+        </childnode>
+      </node>
+      <node id="113">
+        <label>SSHClient</label>
+      </node>
+      <node id="112">
+        <label>URLConnection</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" line="19" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/SFTPURLConnection.java" bodystart="18" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a1396bf9b5defe9fa844a63b5cd40ac0e" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>connect</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a0924d1107a459be632532ef34324494e" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>getInputStream</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a4170f42681efaf92df5c2030f5298905" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>getOutputStream</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1aa608e58be69b0389d82d846a25091d36" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>setContentType</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ac2f45f32dfcaef408189cabb2644841c" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>setRequestHeader</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a31333738e73c420407fe864e744eb5e3" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>SFTPURLConnection</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ab5999bb91c95b814ef94814285794a36" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::SFTPURLConnection</scope><name>ssh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

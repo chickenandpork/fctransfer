@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" kind="class"><name>org::smallfoot::filexfer::ApacheCommonsNetSFTP</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1ad6f50b0642401b9d8a38893ccc852bdf" kind="function"><name>examples</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a4ef8d35ab128080eb511f7e26cd7ab7b" kind="function"><name>handles</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a67d38a2fe0500ee93a9613fc011497b4" kind="function"><name>ApacheCommonsNetSFTP</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa2149aced9d90555f788dfc81c23d15" kind="function"><name>name</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa3dfccec4b989cafc56103eb1ee82a6" kind="function"><name>upload</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1ac659126c0b9e888dd6c0a91560e69c19" kind="function"><name>FileTransferAbortedException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a6d0ddeded5d8a06a0a6e8dc5428642a9" kind="function"><name>FileTransferAbortedException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a5d7f46551725ecdab4fbfd1c8caae3c6" kind="function"><name>FileTransferAbortedException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a61bd4c413cd52e893d212a3ecf012ff0" kind="function"><name>FileTransferAbortedException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch::FileTransferChecksumMismatchException</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException_1a68f39ff221119291117ba025fbaf6b48" kind="function"><name>FileTransferChecksumMismatchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException_1a8c8c31fd8e685938b30b756523b56f09" kind="function"><name>FileTransferChecksumMismatchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException_1ae18c6b90199429c6b6b4dadd5f3f58ab" kind="function"><name>FileTransferChecksumMismatchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException_1a31865456cffdddc2b6526791ec7551d3" kind="function"><name>FileTransferChecksumMismatchException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a7eebb8f05696cd7cfd131b36ca392895" kind="function"><name>FileTransferDataTransferException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a730a4e8226d9a8b6cd43aa50687e854c" kind="function"><name>FileTransferDataTransferException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a3609c8674a0be3d2ecc75870110a95ff" kind="function"><name>FileTransferDataTransferException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a8a3a6483964a951973d4c23e6b7758ea" kind="function"><name>FileTransferDataTransferException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch::FileTransferIllegalFSMReplyException</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException_1ad27ca86ec85b2c39c339bdaf0eee3560" kind="function"><name>FileTransferIllegalFSMReplyException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException_1a4e8ffe04c5de02a5750e97613ef40af8" kind="function"><name>FileTransferIllegalFSMReplyException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException_1a2e552ceb66966a3493c3c47227d5ba6c" kind="function"><name>FileTransferIllegalFSMReplyException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException_1a037cd8e75d9a35ac4725a4296965d46f" kind="function"><name>FileTransferIllegalFSMReplyException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a7ed35f0a10205492ddcfa6dc98f7abc4" kind="variable"><name>url</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" kind="function"><name>checksum</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a0009fd5377f2d667c4b58bc213ccde74" kind="function"><name>checksum</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ad6f50b0642401b9d8a38893ccc852bdf" kind="function"><name>examples</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a4ef8d35ab128080eb511f7e26cd7ab7b" kind="function"><name>handles</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a947b12172158ca842bfe6bbae050da93" kind="function"><name>MD5toString</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a976c78af5cffbf292c6a1ad4f8f5f352" kind="function"><name>getHost</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6cba30c67b9a7c8d4750e7e3108961c6" kind="function"><name>getPass</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6779d0f135fcec6c7f8a8ee49d7af165" kind="function"><name>getPath</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af8214ba89d8ad71194a2d69bea5cb808" kind="function"><name>getUser</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1afa2149aced9d90555f788dfc81c23d15" kind="function"><name>name</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a86dbba100f309afdccf3fc128da6a6cb" kind="function"><name>upload</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1adfd6d2d56dee0986ab383e3735a2d0e1" kind="function"><name>upload</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a076325fe5b818494126d7207b994cf33" kind="function"><name>getHost</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a65223e12ceba5a2741ec28bdcc5966dd" kind="function"><name>getPass</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af0548449fd1f1e858c082a89b73e22af" kind="function"><name>getPath</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ac75d9760404251db07bbc67effbbcbc1" kind="function"><name>getPort</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a8c3f5484619416730c59684896413c47" kind="function"><name>getUser</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6b637334c5d8e69c154325c9aa55bbfd" kind="function"><name>getPort</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" kind="class"><name>org::smallfoot::filexfer::FileTransferWinch::FileTransferWinchException</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1abf4a7354f578a7ff2783d7259d4a35c1" kind="function"><name>FileTransferWinchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a24d32d742afc2eb515a707f9086ae9a6" kind="function"><name>FileTransferWinchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a28313c0c520cd234b6ccc2fafa72f8e5" kind="function"><name>FileTransferWinchException</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a0b99ba23fd2cf504371e7c461c6098fb" kind="function"><name>FileTransferWinchException</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" kind="class"><name>org::smallfoot::filexfer::FTP4J</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1a0e3d45ece68dfe31dfd1dcf7ed8c7628" kind="variable"><name>proxy</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1ad6f50b0642401b9d8a38893ccc852bdf" kind="function"><name>examples</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1a4ef8d35ab128080eb511f7e26cd7ab7b" kind="function"><name>handles</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1ad5bd367701ec46e8d0ba3f0ae3d83cae" kind="function"><name>FTP4J</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1a6cba30c67b9a7c8d4750e7e3108961c6" kind="function"><name>getPass</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1af8214ba89d8ad71194a2d69bea5cb808" kind="function"><name>getUser</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1afa2149aced9d90555f788dfc81c23d15" kind="function"><name>name</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1afa3dfccec4b989cafc56103eb1ee82a6" kind="function"><name>upload</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler" kind="class"><name>org::smallfoot::filexfer::sftp::Handler</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler_1a1ef9160a9dbe5c066dd23e0f2cde39da" kind="function"><name>openConnection</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection" kind="class"><name>org::smallfoot::filexfer::sftp::SFTPURLConnection</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ab5999bb91c95b814ef94814285794a36" kind="variable"><name>ssh</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a31333738e73c420407fe864e744eb5e3" kind="function"><name>SFTPURLConnection</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a1396bf9b5defe9fa844a63b5cd40ac0e" kind="function"><name>connect</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a0924d1107a459be632532ef34324494e" kind="function"><name>getInputStream</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1a4170f42681efaf92df5c2030f5298905" kind="function"><name>getOutputStream</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1aa608e58be69b0389d82d846a25091d36" kind="function"><name>setContentType</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ac2f45f32dfcaef408189cabb2644841c" kind="function"><name>setRequestHeader</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1transfer_1_1version" kind="class"><name>org::smallfoot::transfer::version</name>
+    <member refid="classorg_1_1smallfoot_1_1transfer_1_1version_1ae4faf7ff4190d227357ef851490d7757" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespaceit_1_1sauronsoftware_1_1ftp4j" kind="namespace"><name>it::sauronsoftware::ftp4j</name>
+  </compound>
+  <compound refid="namespacejava_1_1io" kind="namespace"><name>java::io</name>
+  </compound>
+  <compound refid="namespaceorg" kind="namespace"><name>org</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot" kind="namespace"><name>org::smallfoot</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot_1_1filexfer" kind="namespace"><name>org::smallfoot::filexfer</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot_1_1filexfer_1_1sftp" kind="namespace"><name>org::smallfoot::filexfer::sftp</name>
+  </compound>
+  <compound refid="namespaceorg_1_1smallfoot_1_1transfer" kind="namespace"><name>org::smallfoot::transfer</name>
+  </compound>
+  <compound refid="README_8dox" kind="file"><name>README.dox</name>
+  </compound>
+  <compound refid="ApacheCommonsNetSFTP_8java" kind="file"><name>ApacheCommonsNetSFTP.java</name>
+  </compound>
+  <compound refid="FileTransferWinch_8java" kind="file"><name>FileTransferWinch.java</name>
+  </compound>
+  <compound refid="FTP4J_8java" kind="file"><name>FTP4J.java</name>
+  </compound>
+  <compound refid="Handler_8java" kind="file"><name>Handler.java</name>
+  </compound>
+  <compound refid="SFTPURLConnection_8java" kind="file"><name>SFTPURLConnection.java</name>
+  </compound>
+  <compound refid="version_8java" kind="file"><name>version.java</name>
+  </compound>
+  <compound refid="WinchFactory_8java" kind="file"><name>WinchFactory.java</name>
+  </compound>
+  <compound refid="md_htdocs_README" kind="page"><name>md_htdocs_README</name>
+  </compound>
+  <compound refid="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir"><name>java</name>
+  </compound>
+  <compound refid="dir_1fc2918f839e083ad693d50cbc884b82" kind="dir"><name>java/sftp</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

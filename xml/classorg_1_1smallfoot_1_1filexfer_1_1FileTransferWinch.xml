@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kind="class" prot="public" abstract="yes">
+    <compoundname>org::smallfoot::filexfer::FileTransferWinch</compoundname>
+    <derivedcompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" prot="public" virt="non-virtual">ApacheCommonsNetSFTP</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" prot="public" virt="non-virtual">FTP4J</derivedcompoundref>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException" prot="public">org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException" prot="public">org::smallfoot::filexfer::FileTransferWinch::FileTransferChecksumMismatchException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException" prot="public">org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException" prot="public">org::smallfoot::filexfer::FileTransferWinch::FileTransferIllegalFSMReplyException</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" prot="public">org::smallfoot::filexfer::FileTransferWinch::FileTransferWinchException</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a7ed35f0a10205492ddcfa6dc98f7abc4" prot="protected" static="no" mutable="no">
+        <type>java.net.URL</type>
+        <definition>java.net.URL url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="8" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String checksum</definition>
+        <argsstring>(File file)</argsstring>
+        <name>checksum</name>
+        <param>
+          <type>File</type>
+          <declname>file</declname>
+        </param>
+        <exceptions> throws java.security.NoSuchAlgorithmException, java.io.FileNotFoundException, java.io.IOException     </exceptions>
+        <briefdescription>
+<para>Calculate an MD5 checksum. </para>        </briefdescription>
+        <detaileddescription>
+<para>In converting this file from VIFieldTool code, the checksum stuff was already here, so my logic was &quot;why make a user search for checksumming tools?&quot; The resulting algorithm generates a checksum compatible with the &quot;md5&quot; and &quot;md5sum&quot; tools available in everything non-Windows everywhere. It&apos;s like &quot;hey, why not include a checksum piece with everything?&quot;</para><para>So in this function, given a filename, opens it up and reads in data blocks, incorporating each against the MD5 digest: stirring the pot-of-MD5 with blocks of bytes to generate the final checksum digest.</para><para>This file itself may have no testcases, but this function is confirmed against the build platform&apos;s md5 or md5sum program for accuracy.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename of the file to calculate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>checksum, as a string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="275" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="275" bodyend="293"/>
+        <references refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a947b12172158ca842bfe6bbae050da93" compoundref="FileTransferWinch_8java" startline="243" endline="253">FileTransferWinch.MD5toString</references>
+        <referencedby refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a0009fd5377f2d667c4b58bc213ccde74" compoundref="FileTransferWinch_8java" startline="304" endline="308">FileTransferWinch.checksum</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J_1afa3dfccec4b989cafc56103eb1ee82a6" compoundref="FTP4J_8java" startline="66" endline="151">FTP4J.upload</referencedby>
+        <referencedby refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa3dfccec4b989cafc56103eb1ee82a6" compoundref="ApacheCommonsNetSFTP_8java" startline="85" endline="211">ApacheCommonsNetSFTP.upload</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a0009fd5377f2d667c4b58bc213ccde74" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String checksum</definition>
+        <argsstring>(String file)</argsstring>
+        <name>checksum</name>
+        <param>
+          <type>String</type>
+          <declname>file</declname>
+        </param>
+        <exceptions> throws java.security.NoSuchAlgorithmException, java.io.FileNotFoundException, java.io.IOException     </exceptions>
+        <briefdescription>
+<para>Calculate an MD5 checksum. </para>        </briefdescription>
+        <detaileddescription>
+<para>So in this function, given a filename, it passes execution to the <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" kindref="member">checksum(File)</ref> function do do the actual work.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename of the file to calculate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>checksum, as a string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="304" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="304" bodyend="308"/>
+        <references refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" compoundref="FileTransferWinch_8java" startline="275" endline="293">FileTransferWinch.checksum</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ad6f50b0642401b9d8a38893ccc852bdf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String[]</type>
+        <definition>static String [] examples</definition>
+        <argsstring>(java.net.URL url)</argsstring>
+        <name>examples</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>list one or more example URLs showing the available upload/download protocols </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a sample URL showing user/pass/pathname </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array of examples using that URL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="25" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a4ef8d35ab128080eb511f7e26cd7ab7b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean handles</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>handles</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="10" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a947b12172158ca842bfe6bbae050da93" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String MD5toString</definition>
+        <argsstring>(byte[] digest)</argsstring>
+        <name>MD5toString</name>
+        <param>
+          <type>byte[]</type>
+          <declname>digest</declname>
+        </param>
+        <briefdescription>
+<para>convert a MD5 digest to a printable string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Part of &quot;hey, why not include a checksum piece with everything?&quot;</para><para>Public/Static because, hey, it might be useful elsewhere, and needs no state</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>digest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resulting MD5 digest to convert to a string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string representation of the digest </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="243" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="243" bodyend="253"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" compoundref="FileTransferWinch_8java" startline="275" endline="293">FileTransferWinch.checksum</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a976c78af5cffbf292c6a1ad4f8f5f352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String getHost</definition>
+        <argsstring>()</argsstring>
+        <name>getHost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="140" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6cba30c67b9a7c8d4750e7e3108961c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String getPass</definition>
+        <argsstring>()</argsstring>
+        <name>getPass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="150" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6779d0f135fcec6c7f8a8ee49d7af165" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String getPath</definition>
+        <argsstring>()</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="202" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af8214ba89d8ad71194a2d69bea5cb808" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String getUser</definition>
+        <argsstring>()</argsstring>
+        <name>getUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="178" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1afa2149aced9d90555f788dfc81c23d15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="15" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a86dbba100f309afdccf3fc128da6a6cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract boolean</type>
+        <definition>abstract boolean upload</definition>
+        <argsstring>(File file, Vector&lt; String &gt; uploadNotify)</argsstring>
+        <name>upload</name>
+        <param>
+          <type>File</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Vector&lt; String &gt;</type>
+          <declname>uploadNotify</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" kindref="compound">FileTransferWinchException</ref></exceptions>
+        <briefdescription>
+<para>upload a file using this <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref>; errors in upload are handled via Exceptions </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the content to upload </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uploadNotify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if upload was checksum-certified; false is such facility isn&apos;t available (error if checksum is available and mismatches) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="36" column="1"/>
+        <referencedby refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1adfd6d2d56dee0986ab383e3735a2d0e1" compoundref="FileTransferWinch_8java" startline="44" endline="47">FileTransferWinch.upload</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1adfd6d2d56dee0986ab383e3735a2d0e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean upload</definition>
+        <argsstring>(String file, Vector&lt; String &gt; uploadNotify)</argsstring>
+        <name>upload</name>
+        <param>
+          <type>String</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Vector&lt; String &gt;</type>
+          <declname>uploadNotify</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" kindref="compound">FileTransferWinchException</ref>     </exceptions>
+        <briefdescription>
+<para>upload a file using this <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref>; errors in upload are handled via Exceptions </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the content to upload </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uploadNotify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if upload was checksum-certified; false is such facility isn&apos;t available (error if checksum is available and mismatches) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="44" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="44" bodyend="47"/>
+        <references refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a86dbba100f309afdccf3fc128da6a6cb">FileTransferWinch.upload</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a076325fe5b818494126d7207b994cf33" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String getHost</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>getHost</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="144" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a65223e12ceba5a2741ec28bdcc5966dd" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String getPass</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>getPass</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="154" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="154" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af0548449fd1f1e858c082a89b73e22af" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String getPath</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>getPath</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="206" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="206" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ac75d9760404251db07bbc67effbbcbc1" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int getPort</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>getPort</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="227" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="227" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a8c3f5484619416730c59684896413c47" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String getUser</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>getUser</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="182" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="182" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6b637334c5d8e69c154325c9aa55bbfd" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getPort</definition>
+        <argsstring>()</argsstring>
+        <name>getPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="223" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="223" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="90">
+        <label>ApacheCommonsNetSFTP</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP"/>
+        <childnode refid="89" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>FTP4J</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
+        <childnode refid="89" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>FileTransferWinch</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="7" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="6" bodyend="313"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>checksum</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a0009fd5377f2d667c4b58bc213ccde74" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>checksum</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ad6f50b0642401b9d8a38893ccc852bdf" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>examples</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a976c78af5cffbf292c6a1ad4f8f5f352" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getHost</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a076325fe5b818494126d7207b994cf33" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getHost</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6cba30c67b9a7c8d4750e7e3108961c6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPass</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a65223e12ceba5a2741ec28bdcc5966dd" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPass</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6779d0f135fcec6c7f8a8ee49d7af165" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPath</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af0548449fd1f1e858c082a89b73e22af" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPath</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6b637334c5d8e69c154325c9aa55bbfd" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPort</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ac75d9760404251db07bbc67effbbcbc1" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getPort</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af8214ba89d8ad71194a2d69bea5cb808" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getUser</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a8c3f5484619416730c59684896413c47" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>getUser</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a4ef8d35ab128080eb511f7e26cd7ab7b" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>handles</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a947b12172158ca842bfe6bbae050da93" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>MD5toString</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1afa2149aced9d90555f788dfc81c23d15" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>name</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a86dbba100f309afdccf3fc128da6a6cb" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>upload</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1adfd6d2d56dee0986ab383e3735a2d0e1" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>upload</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a7ed35f0a10205492ddcfa6dc98f7abc4" prot="protected" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

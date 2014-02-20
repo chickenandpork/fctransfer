@@ -1,0 +1,132 @@
+\section{Apache\-Commons\-Net\-S\-F\-T\-P Class Reference}
+\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP}\index{Apache\-Commons\-Net\-S\-F\-T\-P@{Apache\-Commons\-Net\-S\-F\-T\-P}}
+
+
+Using Apache Commons-\/net-\/ssh, based on the S\-F\-T\-P\-Upload example at {\tt https\-://commons-\/net-\/ssh.\-googlecode.\-com/svn-\/history/r204/src/main/java/examples/ssh/\-S\-F\-T\-P\-Upload.\-java} , upload a file.  
+
+
+
+
+Inheritance diagram for Apache\-Commons\-Net\-S\-F\-T\-P\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Apache\-Commons\-Net\-S\-F\-T\-P\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Apache\-Commons\-Net\-S\-F\-T\-P} (java.\-net.\-U\-R\-L u)\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_a67d38a2fe0500ee93a9613fc011497b4}
+
+\item 
+String {\bfseries name} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_afa2149aced9d90555f788dfc81c23d15}
+
+\item 
+boolean {\bf upload} (File file, Vector$<$ String $>$ upload\-Notify)  throws File\-Transfer\-Winch\-Exception     
+\begin{DoxyCompactList}\small\item\em Attempt an upload to the remote server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String[$\,$] {\bf examples} (java.\-net.\-U\-R\-L url)
+\begin{DoxyCompactList}\small\item\em list one or more example U\-R\-Ls showing the available upload/download protocols \end{DoxyCompactList}\item 
+static boolean {\bfseries handles} (java.\-net.\-U\-R\-L u)\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_a4ef8d35ab128080eb511f7e26cd7ab7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Using Apache Commons-\/net-\/ssh, based on the S\-F\-T\-P\-Upload example at {\tt https\-://commons-\/net-\/ssh.\-googlecode.\-com/svn-\/history/r204/src/main/java/examples/ssh/\-S\-F\-T\-P\-Upload.\-java} , upload a file. 
+
+Definition at line 28 of file Apache\-Commons\-Net\-S\-F\-T\-P.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\index{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P@{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P}!examples@{examples}}
+\index{examples@{examples}!org::smallfoot::filexfer::ApacheCommonsNetSFTP@{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P}}
+\subsubsection[{examples}]{\setlength{\rightskip}{0pt plus 5cm}static String [$\,$] examples (
+\begin{DoxyParamCaption}
+\item[{java.\-net.\-U\-R\-L}]{url}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_ad6f50b0642401b9d8a38893ccc852bdf}
+
+
+list one or more example U\-R\-Ls showing the available upload/download protocols 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & a sample U\-R\-L showing user/pass/pathname \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of examples using that U\-R\-L 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file Apache\-Commons\-Net\-S\-F\-T\-P.\-java.
+
+\index{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P@{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P}!upload@{upload}}
+\index{upload@{upload}!org::smallfoot::filexfer::ApacheCommonsNetSFTP@{org\-::smallfoot\-::filexfer\-::\-Apache\-Commons\-Net\-S\-F\-T\-P}}
+\subsubsection[{upload}]{\setlength{\rightskip}{0pt plus 5cm}boolean upload (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Vector$<$ String $>$}]{upload\-Notify}
+\end{DoxyParamCaption}
+) throws {\bf File\-Transfer\-Winch\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_afa3dfccec4b989cafc56103eb1ee82a6}
+
+
+Attempt an upload to the remote server. 
+
+Initially very basic, this can be extended for all the intelligence we need to get data through.
+
+This function, given a filename, connects to an F\-T\-P server and attempts to store the file. Initially the username and password are defaulted to those usable to upload from P\-A\-K\-\_\-\-R\-E\-D, but later (when i can look at U\-R\-L factories) this can be extended. The capability will be preserved to give the function a list of statuses and a position so that a later threaded design can try a number of uploads in parallel, ditching all but the most efficient\-: on connection, so status-\/indiciates; on successful 1-\/k upload with a temp filename, status-\/indicates finished 1k, and checks whether others are -- if others are ahead of it, status-\/indicates as \char`\"{}losing\char`\"{} and deletes its temp file; others behind it will so-\/suicide; if it's the non-\/losing, then this thread \char`\"{}continues\char`\"{} the upload from 1k, or deletes/restarts if continuation is impossible. In that way, the fastest connection continues, the others give up, timeouts are handled implicitly.
+
+Where possible, checksum post-\/upload is verified
+
+Where possible, a checksum file \{filename\}.sum is uploaded Where possible, a manifest X\-M\-L file is sent (my hostname, my user I\-D, any tasks or objectives, etc)
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & filename to upload \\
+\hline
+{\em upload\-Notify} & array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\-O\-K, \#\#\char`\"{}, \char`\"{}\-F\-A\-I\-L, \#\#\char`\"{}, \char`\"{}\-U\-N\-K\-N\-O\-W\-N\char`\"{} based on results (where \char`\"{}\#\#\char`\"{} is a line number of variable length) 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Apache\-Commons\-Net\-S\-F\-T\-P.\-java.
+
+
+
+References File\-Transfer\-Winch.\-checksum().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_afa3dfccec4b989cafc56103eb1ee82a6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+java/Apache\-Commons\-Net\-S\-F\-T\-P.\-java\end{DoxyCompactItemize}

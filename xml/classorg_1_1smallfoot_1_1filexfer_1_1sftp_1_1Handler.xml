@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::sftp::Handler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">URLStreamHandler</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler_1a1ef9160a9dbe5c066dd23e0f2cde39da" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.net.URLConnection</type>
+        <definition>java.net.URLConnection openConnection</definition>
+        <argsstring>(java.net.URL url)</argsstring>
+        <name>openConnection</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>openConnection(java.net.URL) overrides java.net.URLStreamHandler.openConnection(URL) by wrapping a apache-commons-net-sftp client </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>populated connection as <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection" kindref="compound">org.smallfoot.filexfer.sftp.SFTPURLConnection(Connection)</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL to connect to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/sftp/Handler.java" line="16" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/Handler.java" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="106">
+        <label>URLStreamHandler</label>
+      </node>
+      <node id="105">
+        <label>Handler</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="108">
+        <label>URLStreamHandler</label>
+      </node>
+      <node id="107">
+        <label>Handler</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler"/>
+        <childnode refid="108" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/sftp/Handler.java" line="9" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/sftp/Handler.java" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler_1a1ef9160a9dbe5c066dd23e0f2cde39da" prot="protected" virt="non-virtual"><scope>org::smallfoot::filexfer::sftp::Handler</scope><name>openConnection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

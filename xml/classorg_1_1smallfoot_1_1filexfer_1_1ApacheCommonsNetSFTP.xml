@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::ApacheCommonsNetSFTP</compoundname>
+    <basecompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" prot="public" virt="non-virtual">FileTransferWinch</basecompoundref>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1ad6f50b0642401b9d8a38893ccc852bdf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String[]</type>
+        <definition>static String [] examples</definition>
+        <argsstring>(java.net.URL url)</argsstring>
+        <name>examples</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>list one or more example URLs showing the available upload/download protocols </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a sample URL showing user/pass/pathname </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array of examples using that URL </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="52" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a4ef8d35ab128080eb511f7e26cd7ab7b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean handles</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>handles</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="31" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="31" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a67d38a2fe0500ee93a9613fc011497b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ApacheCommonsNetSFTP</definition>
+        <argsstring>(java.net.URL u)</argsstring>
+        <name>ApacheCommonsNetSFTP</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="36" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa2149aced9d90555f788dfc81c23d15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="41" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa3dfccec4b989cafc56103eb1ee82a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean upload</definition>
+        <argsstring>(File file, Vector&lt; String &gt; uploadNotify)</argsstring>
+        <name>upload</name>
+        <param>
+          <type>File</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Vector&lt; String &gt;</type>
+          <declname>uploadNotify</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" kindref="compound">FileTransferWinchException</ref>     </exceptions>
+        <briefdescription>
+<para>Attempt an upload to the remote server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initially very basic, this can be extended for all the intelligence we need to get data through.</para><para>This function, given a filename, connects to an FTP server and attempts to store the file. Initially the username and password are defaulted to those usable to upload from PAK_RED, but later (when i can look at URL factories) this can be extended. The capability will be preserved to give the function a list of statuses and a position so that a later threaded design can try a number of uploads in parallel, ditching all but the most efficient: on connection, so status-indiciates; on successful 1-k upload with a temp filename, status-indicates finished 1k, and checks whether others are <ndash/> if others are ahead of it, status-indicates as &quot;losing&quot; and deletes its temp file; others behind it will so-suicide; if it&apos;s the non-losing, then this thread &quot;continues&quot; the upload from 1k, or deletes/restarts if continuation is impossible. In that way, the fastest connection continues, the others give up, timeouts are handled implicitly.</para><para>Where possible, checksum post-upload is verified</para><para>Where possible, a checksum file {filename}.sum is uploaded Where possible, a manifest XML file is sent (my hostname, my user ID, any tasks or objectives, etc)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to upload </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uploadNotify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&quot;OK, ##&quot;, &quot;FAIL, ##&quot;, &quot;UNKNOWN&quot; based on results (where &quot;##&quot; is a line number of variable length) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="85" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="85" bodyend="211"/>
+        <references refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" compoundref="FileTransferWinch_8java" startline="275" endline="293">FileTransferWinch.checksum</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Using Apache Commons-net-ssh, based on the SFTPUpload example at <ulink url="https://commons-net-ssh.googlecode.com/svn-history/r204/src/main/java/examples/ssh/SFTPUpload.java">https://commons-net-ssh.googlecode.com/svn-history/r204/src/main/java/examples/ssh/SFTPUpload.java</ulink> , upload a file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="58">
+        <label>ApacheCommonsNetSFTP</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>FileTransferWinch</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="60">
+        <label>ApacheCommonsNetSFTP</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>FileTransferWinch</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="29" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" bodystart="28" bodyend="217"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a67d38a2fe0500ee93a9613fc011497b4" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>ApacheCommonsNetSFTP</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1affa1c48a18997a5ea5458d162d659c63" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>checksum</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a0009fd5377f2d667c4b58bc213ccde74" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>checksum</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1ad6f50b0642401b9d8a38893ccc852bdf" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>examples</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a976c78af5cffbf292c6a1ad4f8f5f352" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getHost</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a076325fe5b818494126d7207b994cf33" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getHost</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6cba30c67b9a7c8d4750e7e3108961c6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPass</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a65223e12ceba5a2741ec28bdcc5966dd" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPass</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6779d0f135fcec6c7f8a8ee49d7af165" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPath</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af0548449fd1f1e858c082a89b73e22af" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPath</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a6b637334c5d8e69c154325c9aa55bbfd" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPort</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1ac75d9760404251db07bbc67effbbcbc1" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getPort</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1af8214ba89d8ad71194a2d69bea5cb808" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getUser</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a8c3f5484619416730c59684896413c47" prot="package" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>getUser</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1a4ef8d35ab128080eb511f7e26cd7ab7b" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>handles</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a947b12172158ca842bfe6bbae050da93" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>MD5toString</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa2149aced9d90555f788dfc81c23d15" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>name</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP_1afa3dfccec4b989cafc56103eb1ee82a6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>upload</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1adfd6d2d56dee0986ab383e3735a2d0e1" prot="public" virt="non-virtual" ambiguityscope="org::smallfoot::filexfer::FileTransferWinch."><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>upload</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1a7ed35f0a10205492ddcfa6dc98f7abc4" prot="protected" virt="non-virtual"><scope>org::smallfoot::filexfer::ApacheCommonsNetSFTP</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

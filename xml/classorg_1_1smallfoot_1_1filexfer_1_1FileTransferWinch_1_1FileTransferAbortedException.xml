@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</compoundname>
+    <basecompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" prot="public" virt="non-virtual">FileTransferWinch.FileTransferWinchException</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1ac659126c0b9e888dd6c0a91560e69c19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferAbortedException</definition>
+        <argsstring>(String s, Throwable t)</argsstring>
+        <name>FileTransferAbortedException</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>Throwable</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="124" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a6d0ddeded5d8a06a0a6e8dc5428642a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferAbortedException</definition>
+        <argsstring>(Throwable t)</argsstring>
+        <name>FileTransferAbortedException</name>
+        <param>
+          <type>Throwable</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="127" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a5d7f46551725ecdab4fbfd1c8caae3c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferAbortedException</definition>
+        <argsstring>(String s)</argsstring>
+        <name>FileTransferAbortedException</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="130" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a61bd4c413cd52e893d212a3ecf012ff0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferAbortedException</definition>
+        <argsstring>()</argsstring>
+        <name>FileTransferAbortedException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="133" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="133" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception indicates that transfer was aborted; I have not yet clarified in the API whether this exception would take precidence over <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException" kindref="compound">FileTransferDataTransferException</ref> if both occur, or a <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException" kindref="compound">FileTransferDataTransferException</ref> causes a <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException" kindref="compound">FileTransferAbortedException</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="63">
+        <label>FileTransferWinch.FileTransferWinchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Exception</label>
+      </node>
+      <node id="62">
+        <label>FileTransferWinch.FileTransferAbortedException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="66">
+        <label>FileTransferWinch.FileTransferWinchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>Exception</label>
+      </node>
+      <node id="65">
+        <label>FileTransferWinch.FileTransferAbortedException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="123" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="122" bodyend="137"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1ac659126c0b9e888dd6c0a91560e69c19" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferAbortedException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a6d0ddeded5d8a06a0a6e8dc5428642a9" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferAbortedException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a5d7f46551725ecdab4fbfd1c8caae3c6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferAbortedException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException_1a61bd4c413cd52e893d212a3ecf012ff0" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferAbortedException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1abf4a7354f578a7ff2783d7259d4a35c1" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a24d32d742afc2eb515a707f9086ae9a6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a28313c0c520cd234b6ccc2fafa72f8e5" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a0b99ba23fd2cf504371e7c461c6098fb" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferAbortedException</scope><name>FileTransferWinchException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

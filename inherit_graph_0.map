@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch.html" title="FileTransferWinch" alt="" coords="5,31,155,57"/>
+<area shape="rect" href="$classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP.html" title="Using Apache Commons&#45;net&#45;ssh, based on the SFTPUpload example at https://commons&#45;net&#45;ssh.googlecode.com/svn&#45;history/r204/src/main/java/examples/ssh/SFTPUpload.java , upload a file. " alt="" coords="203,5,413,32"/>
+<area shape="rect" href="$classorg_1_1smallfoot_1_1filexfer_1_1FTP4J.html" title="FTP4J" alt="" coords="279,56,337,83"/>
+</map>

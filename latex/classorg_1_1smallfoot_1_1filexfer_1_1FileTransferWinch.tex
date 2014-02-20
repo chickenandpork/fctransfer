@@ -1,0 +1,290 @@
+\section{File\-Transfer\-Winch Class Reference}
+\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch}\index{File\-Transfer\-Winch@{File\-Transfer\-Winch}}
+
+
+Inheritance diagram for File\-Transfer\-Winch\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf File\-Transfer\-Aborted\-Exception}
+\begin{DoxyCompactList}\small\item\em This exception indicates that transfer was aborted; I have not yet clarified in the A\-P\-I whether this exception would take precidence over \doxyref{File\-Transfer\-Data\-Transfer\-Exception}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException} if both occur, or a \doxyref{File\-Transfer\-Data\-Transfer\-Exception}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException} causes a \doxyref{File\-Transfer\-Aborted\-Exception}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException}. \end{DoxyCompactList}\item 
+class {\bf File\-Transfer\-Checksum\-Mismatch\-Exception}
+\begin{DoxyCompactList}\small\item\em This exception alerts to the specific Data Transfer issuesuch that the receiver's checksum confirmation did not match the sender ... \end{DoxyCompactList}\item 
+class {\bf File\-Transfer\-Data\-Transfer\-Exception}
+\begin{DoxyCompactList}\small\item\em This exception alerts to issues during transfer of data\-: connection lost, etc ... \end{DoxyCompactList}\item 
+class {\bf File\-Transfer\-Illegal\-F\-S\-M\-Reply\-Exception}
+\begin{DoxyCompactList}\small\item\em This exception indicates that the underlying Finite State Machine received an unexpected reply, and has no next-\/state in the conversation. \end{DoxyCompactList}\item 
+class {\bf File\-Transfer\-Winch\-Exception}
+\begin{DoxyCompactList}\small\item\em A base collector exception\-: \char`\"{}there was some exception in the File\-Transfer\-Winch class\char`\"{}; typically, more meaning and/or usefulness is reached by catching specific subclasses of this exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String {\bfseries get\-Host} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a976c78af5cffbf292c6a1ad4f8f5f352}
+
+\item 
+String {\bfseries get\-Pass} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a6cba30c67b9a7c8d4750e7e3108961c6}
+
+\item 
+String {\bfseries get\-Path} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a6779d0f135fcec6c7f8a8ee49d7af165}
+
+\item 
+String {\bfseries get\-User} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_af8214ba89d8ad71194a2d69bea5cb808}
+
+\item 
+String {\bfseries name} ()\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_afa2149aced9d90555f788dfc81c23d15}
+
+\item 
+abstract boolean {\bf upload} (File file, Vector$<$ String $>$ upload\-Notify)  throws File\-Transfer\-Winch\-Exception
+\begin{DoxyCompactList}\small\item\em upload a file using this \doxyref{File\-Transfer\-Winch}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch}; errors in upload are handled via Exceptions \end{DoxyCompactList}\item 
+boolean {\bf upload} (String file, Vector$<$ String $>$ upload\-Notify)  throws File\-Transfer\-Winch\-Exception     
+\begin{DoxyCompactList}\small\item\em upload a file using this \doxyref{File\-Transfer\-Winch}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch}; errors in upload are handled via Exceptions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String {\bf checksum} (File file)  throws java.\-security.\-No\-Such\-Algorithm\-Exception, java.\-io.\-File\-Not\-Found\-Exception, java.\-io.\-I\-O\-Exception     
+\begin{DoxyCompactList}\small\item\em Calculate an M\-D5 checksum. \end{DoxyCompactList}\item 
+static String {\bf checksum} (String file)  throws java.\-security.\-No\-Such\-Algorithm\-Exception, java.\-io.\-File\-Not\-Found\-Exception, java.\-io.\-I\-O\-Exception     
+\begin{DoxyCompactList}\small\item\em Calculate an M\-D5 checksum. \end{DoxyCompactList}\item 
+static String[$\,$] {\bf examples} (java.\-net.\-U\-R\-L url)
+\begin{DoxyCompactList}\small\item\em list one or more example U\-R\-Ls showing the available upload/download protocols \end{DoxyCompactList}\item 
+static boolean {\bfseries handles} (java.\-net.\-U\-R\-L u)\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a4ef8d35ab128080eb511f7e26cd7ab7b}
+
+\item 
+static String {\bf M\-D5to\-String} (byte[$\,$] digest)
+\begin{DoxyCompactList}\small\item\em convert a M\-D5 digest to a printable string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+java.\-net.\-U\-R\-L {\bfseries url} = null\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a7ed35f0a10205492ddcfa6dc98f7abc4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file File\-Transfer\-Winch.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!checksum@{checksum}}
+\index{checksum@{checksum}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}static String checksum (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+) throws java.\-security.\-No\-Such\-Algorithm\-Exception, java.\-io.\-File\-Not\-Found\-Exception, java.\-io.\-I\-O\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_affa1c48a18997a5ea5458d162d659c63}
+
+
+Calculate an M\-D5 checksum. 
+
+In converting this file from V\-I\-Field\-Tool code, the checksum stuff was already here, so my logic was \char`\"{}why make a user search for checksumming tools?\char`\"{} The resulting algorithm generates a checksum compatible with the \char`\"{}md5\char`\"{} and \char`\"{}md5sum\char`\"{} tools available in everything non-\/\-Windows everywhere. It's like \char`\"{}hey, why not include a checksum piece with everything?\char`\"{}
+
+So in this function, given a filename, opens it up and reads in data blocks, incorporating each against the M\-D5 digest\-: stirring the pot-\/of-\/\-M\-D5 with blocks of bytes to generate the final checksum digest.
+
+This file itself may have no testcases, but this function is confirmed against the build platform's md5 or md5sum program for accuracy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & filename of the file to calculate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+checksum, as a string 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file File\-Transfer\-Winch.\-java.
+
+
+
+References File\-Transfer\-Winch.\-M\-D5to\-String().
+
+
+
+Referenced by File\-Transfer\-Winch.\-checksum(), F\-T\-P4\-J.\-upload(), and Apache\-Commons\-Net\-S\-F\-T\-P.\-upload().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_affa1c48a18997a5ea5458d162d659c63_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!checksum@{checksum}}
+\index{checksum@{checksum}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}static String checksum (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+) throws java.\-security.\-No\-Such\-Algorithm\-Exception, java.\-io.\-File\-Not\-Found\-Exception, java.\-io.\-I\-O\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a0009fd5377f2d667c4b58bc213ccde74}
+
+
+Calculate an M\-D5 checksum. 
+
+So in this function, given a filename, it passes execution to the \doxyref{checksum(\-File)}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_affa1c48a18997a5ea5458d162d659c63} function do do the actual work.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & filename of the file to calculate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+checksum, as a string 
+\end{DoxyReturn}
+
+
+Definition at line 304 of file File\-Transfer\-Winch.\-java.
+
+
+
+References File\-Transfer\-Winch.\-checksum().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a0009fd5377f2d667c4b58bc213ccde74_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!examples@{examples}}
+\index{examples@{examples}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{examples}]{\setlength{\rightskip}{0pt plus 5cm}static String [$\,$] examples (
+\begin{DoxyParamCaption}
+\item[{java.\-net.\-U\-R\-L}]{url}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_ad6f50b0642401b9d8a38893ccc852bdf}
+
+
+list one or more example U\-R\-Ls showing the available upload/download protocols 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & a sample U\-R\-L showing user/pass/pathname \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of examples using that U\-R\-L 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file File\-Transfer\-Winch.\-java.
+
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!M\-D5to\-String@{M\-D5to\-String}}
+\index{M\-D5to\-String@{M\-D5to\-String}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{M\-D5to\-String}]{\setlength{\rightskip}{0pt plus 5cm}static String M\-D5to\-String (
+\begin{DoxyParamCaption}
+\item[{byte[$\,$]}]{digest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a947b12172158ca842bfe6bbae050da93}
+
+
+convert a M\-D5 digest to a printable string. 
+
+Part of \char`\"{}hey, why not include a checksum piece with everything?\char`\"{}
+
+Public/\-Static because, hey, it might be useful elsewhere, and needs no state
+
+
+\begin{DoxyParams}{Parameters}
+{\em digest} & the resulting M\-D5 digest to convert to a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string representation of the digest 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file File\-Transfer\-Winch.\-java.
+
+
+
+Referenced by File\-Transfer\-Winch.\-checksum().
+
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!upload@{upload}}
+\index{upload@{upload}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{upload}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean upload (
+\begin{DoxyParamCaption}
+\item[{File}]{file, }
+\item[{Vector$<$ String $>$}]{upload\-Notify}
+\end{DoxyParamCaption}
+) throws {\bf File\-Transfer\-Winch\-Exception}\hspace{0.3cm}{\ttfamily [abstract]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_a86dbba100f309afdccf3fc128da6a6cb}
+
+
+upload a file using this \doxyref{File\-Transfer\-Winch}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch}; errors in upload are handled via Exceptions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the content to upload \\
+\hline
+{\em upload\-Notify} & array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if upload was checksum-\/certified; false is such facility isn't available (error if checksum is available and mismatches) 
+\end{DoxyReturn}
+
+
+Referenced by File\-Transfer\-Winch.\-upload().
+
+\index{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}!upload@{upload}}
+\index{upload@{upload}!org::smallfoot::filexfer::FileTransferWinch@{org\-::smallfoot\-::filexfer\-::\-File\-Transfer\-Winch}}
+\subsubsection[{upload}]{\setlength{\rightskip}{0pt plus 5cm}boolean upload (
+\begin{DoxyParamCaption}
+\item[{String}]{file, }
+\item[{Vector$<$ String $>$}]{upload\-Notify}
+\end{DoxyParamCaption}
+) throws {\bf File\-Transfer\-Winch\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}\label{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_adfd6d2d56dee0986ab383e3735a2d0e1}
+
+
+upload a file using this \doxyref{File\-Transfer\-Winch}{p.}{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch}; errors in upload are handled via Exceptions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the content to upload \\
+\hline
+{\em upload\-Notify} & array of identifiers (email address or jabber contacts) to list as notify recipients in the upload checksum file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if upload was checksum-\/certified; false is such facility isn't available (error if checksum is available and mismatches) 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file File\-Transfer\-Winch.\-java.
+
+
+
+References File\-Transfer\-Winch.\-upload().
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_adfd6d2d56dee0986ab383e3735a2d0e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+java/File\-Transfer\-Winch.\-java\end{DoxyCompactItemize}

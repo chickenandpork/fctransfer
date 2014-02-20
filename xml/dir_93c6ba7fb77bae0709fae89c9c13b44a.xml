@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_93c6ba7fb77bae0709fae89c9c13b44a" kind="dir">
+    <compoundname>java</compoundname>
+    <innerdir refid="dir_1fc2918f839e083ad693d50cbc884b82">java/sftp</innerdir>
+    <innerfile refid="ApacheCommonsNetSFTP_8java">ApacheCommonsNetSFTP.java</innerfile>
+    <innerfile refid="FileTransferWinch_8java">FileTransferWinch.java</innerfile>
+    <innerfile refid="FTP4J_8java">FTP4J.java</innerfile>
+    <innerfile refid="version_8java">version.java</innerfile>
+    <innerfile refid="WinchFactory_8java">WinchFactory.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/fctransfer/java/"/>
+  </compounddef>
+</doxygen>

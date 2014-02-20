@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceorg_1_1smallfoot_1_1filexfer_1_1sftp" kind="namespace">
+    <compoundname>org::smallfoot::filexfer::sftp</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler" prot="public">org::smallfoot::filexfer::sftp::Handler</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection" prot="public">org::smallfoot::filexfer::sftp::SFTPURLConnection</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/fctransfer/java/sftp/Handler.java" line="2" column="1"/>
+  </compounddef>
+</doxygen>

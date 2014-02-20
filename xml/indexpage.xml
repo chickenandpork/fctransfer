@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>JavaDoc API Markup for fctransfer</title>
+    <detaileddescription>
+<para><heading level="1">fctransfer </heading>
+</para><para>Basic transfer (upload/download) functions to easily allow simpler tools to share config, content, and data.</para><para>This project is taken from fctools&apos; section that allows it to checksum-upload a large data archive using only a URL and a filename.</para><para>For example, given a target URL (<ulink url="ftp://scott:tiger@ftp.example.com/sub/dir/">ftp://scott:tiger@ftp.example.com/sub/dir/</ulink>) and one or more files (ie data.zip), the library: 1) calculates a checksum 2) uploads the checksum as {file}.sum (in our example, a data.zip.sum file would be sent) 3) uploads the file (in our example, data.zip)</para><para>The uploaded checksum intentionally matches the checksum file used in ages-old traditional &quot;sum&quot; command; this is the same as the &quot;cksum&quot; command.</para><para>An additional intention of sharing this content is to: 1) reduce the time it takes YOU, the next developer, in uploading/sharing content 2) emphasize better practices: checksums, people, they&apos;re really cool things 3) expand to provide an interface to additional upload URL protocols: cifs://, etc.</para><para>Please post your enhancements as pull-requests! If I&apos;m your upstream, share upwards! </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

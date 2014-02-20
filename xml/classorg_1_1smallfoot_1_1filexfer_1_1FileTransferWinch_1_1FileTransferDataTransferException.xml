@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</compoundname>
+    <basecompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException" prot="public" virt="non-virtual">FileTransferWinch.FileTransferWinchException</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException" prot="public" virt="non-virtual">FileTransferWinch.FileTransferChecksumMismatchException</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a7eebb8f05696cd7cfd131b36ca392895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferDataTransferException</definition>
+        <argsstring>(String s, Throwable t)</argsstring>
+        <name>FileTransferDataTransferException</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>Throwable</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="88" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a730a4e8226d9a8b6cd43aa50687e854c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferDataTransferException</definition>
+        <argsstring>(Throwable t)</argsstring>
+        <name>FileTransferDataTransferException</name>
+        <param>
+          <type>Throwable</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="91" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a3609c8674a0be3d2ecc75870110a95ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferDataTransferException</definition>
+        <argsstring>(String s)</argsstring>
+        <name>FileTransferDataTransferException</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="94" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a8a3a6483964a951973d4c23e6b7758ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferDataTransferException</definition>
+        <argsstring>()</argsstring>
+        <name>FileTransferDataTransferException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="97" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="97" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception alerts to issues during transfer of data: connection lost, etc ... </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="77">
+        <label>FileTransferWinch.FileTransferWinchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>FileTransferWinch.FileTransferDataTransferException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>FileTransferWinch.FileTransferChecksumMismatchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="81">
+        <label>FileTransferWinch.FileTransferWinchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>FileTransferWinch.FileTransferDataTransferException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
+        <childnode refid="81" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" line="87" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/FileTransferWinch.java" bodystart="86" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a7eebb8f05696cd7cfd131b36ca392895" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferDataTransferException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a730a4e8226d9a8b6cd43aa50687e854c" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferDataTransferException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a3609c8674a0be3d2ecc75870110a95ff" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferDataTransferException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException_1a8a3a6483964a951973d4c23e6b7758ea" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferDataTransferException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1abf4a7354f578a7ff2783d7259d4a35c1" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a24d32d742afc2eb515a707f9086ae9a6" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a28313c0c520cd234b6ccc2fafa72f8e5" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferWinchException</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException_1a0b99ba23fd2cf504371e7c461c6098fb" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::FileTransferWinch::FileTransferDataTransferException</scope><name>FileTransferWinchException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

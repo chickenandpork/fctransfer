@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceorg_1_1smallfoot_1_1filexfer" kind="namespace">
+    <compoundname>org::smallfoot::filexfer</compoundname>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" prot="public">org::smallfoot::filexfer::ApacheCommonsNetSFTP</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" prot="public">org::smallfoot::filexfer::FileTransferWinch</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" prot="public">org::smallfoot::filexfer::FTP4J</innerclass>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1filexfer_1_1sftp">org::smallfoot::filexfer::sftp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/allan.clark/src/fctransfer/java/ApacheCommonsNetSFTP.java" line="19" column="1"/>
+  </compounddef>
+</doxygen>
