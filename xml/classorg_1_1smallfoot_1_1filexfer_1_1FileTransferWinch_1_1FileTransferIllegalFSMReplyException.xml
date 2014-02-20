@@ -78,36 +78,36 @@
     <detaileddescription>
 <para>Basically: &quot;the other side said something and I didn&apos;t know what to do &quot;. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="84">
+      <node id="86">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="85" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="83">
-        <label>FileTransferWinch.FileTransferIllegalFSMReplyException</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException"/>
-        <childnode refid="84" relation="public-inheritance">
+        <childnode refid="87" relation="public-inheritance">
         </childnode>
       </node>
       <node id="85">
+        <label>FileTransferWinch.FileTransferIllegalFSMReplyException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
         <label>Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="87">
+      <node id="89">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="88" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="86">
-        <label>FileTransferWinch.FileTransferIllegalFSMReplyException</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException"/>
-        <childnode refid="87" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
       </node>
       <node id="88">
+        <label>FileTransferWinch.FileTransferIllegalFSMReplyException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferIllegalFSMReplyException"/>
+        <childnode refid="89" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="90">
         <label>Exception</label>
       </node>
     </collaborationgraph>

@@ -2,8 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="version_8java" kind="file">
     <compoundname>version.java</compoundname>
-    <innerclass refid="classorg_1_1smallfoot_1_1transfer_1_1version" prot="public">org::smallfoot::transfer::version</innerclass>
-    <innernamespace refid="namespaceorg_1_1smallfoot_1_1transfer">org::smallfoot::transfer</innernamespace>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1version" prot="public">org::smallfoot::filexfer::version</innerclass>
+    <innernamespace refid="namespaceorg_1_1smallfoot_1_1filexfer">org::smallfoot::filexfer</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

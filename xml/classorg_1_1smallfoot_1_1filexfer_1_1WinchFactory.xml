@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory" kind="class" prot="public">
+    <compoundname>org::smallfoot::filexfer::WinchFactory</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a22e6581675a84937ebc9ead4c1109570" prot="private" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean _reg</definition>
+        <argsstring></argsstring>
+        <name>_reg</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="82" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref></type>
+        <definition>static FileTransferWinch getWinch</definition>
+        <argsstring>(String url)</argsstring>
+        <name>getWinch</name>
+        <param>
+          <type>String</type>
+          <declname>url</declname>
+        </param>
+        <exceptions> throws java.net.MalformedURLException     </exceptions>
+        <briefdescription>
+<para>provides a <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref> matching the URL given </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>populated winch based on the URL given </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>java.net.MalformedURLException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the URL created form the String is malformed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL to connect to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="29" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1aa260cf55e58230cd670e91507ec4704c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref></type>
+        <definition>static FileTransferWinch getWinch</definition>
+        <argsstring>(java.net.URL url)</argsstring>
+        <name>getWinch</name>
+        <param>
+          <type>java.net.URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>provides a <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref> matching the URL given </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>populated winch based on the URL given </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL to connect to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="38" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a830bb6d507e304f5562ee9f6b54429a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String[]</type>
+        <definition>static String [] getWinchExamples</definition>
+        <argsstring>(String url)</argsstring>
+        <name>getWinchExamples</name>
+        <param>
+          <type>String</type>
+          <declname>url</declname>
+        </param>
+        <exceptions> throws java.net.MalformedURLException     </exceptions>
+        <briefdescription>
+<para>provides an array of example URLs based on the given model by iterating all known Winches </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>populated array of examples </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sample URL to be used in examples </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>java.net.MalformedURLException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given URL chokes on conversion to a java.net.URL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="56" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="56" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a8b260eecbaabcef8473fd87ada040682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="108" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="108" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a59d46b83cc5f9106aab011bb58b55ecd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.util.Vector&lt; <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" kindref="compound">FileTransferWinch</ref> &gt;</type>
+        <definition>java.util.Vector&lt;FileTransferWinch&gt; getWinches</definition>
+        <argsstring>()</argsstring>
+        <name>getWinches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="71" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="71" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1ae893b0fc6603239324297b31118fae7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WinchFactory</definition>
+        <argsstring>()</argsstring>
+        <name>WinchFactory</name>
+        <briefdescription>
+<para>stub constructor for the <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1ae893b0fc6603239324297b31118fae7d" kindref="member">WinchFactory()</ref> also appends/writes the system property &quot;java.protocol.handler.pkgs&quot; in accordance with <ulink url="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html">http://docs.oracle.com/javase/7/docs/api/java/net/URL.html</ulink> </para>        </briefdescription>
+        <detaileddescription>
+<para>NOTE: my own code uses &quot;package1:package2&quot; whereas the example uses &quot;package1|package2&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="88" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="88" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory" kindref="compound">WinchFactory</ref> is the main entry point for this package; WinchFactory.main() shows how a filetransfer &quot;winch&quot; can be found for a URL, but in general a consumer of this class wants to: </para>    </briefdescription>
+    <detaileddescription>
+<para><orderedlist>
+<listitem><para>use <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" kindref="member">getWinch(String)</ref> to find an appropriate winch for a URL</para></listitem><listitem><para>exercise the winch using FileTransferWinch.upload(File) or FileTransferWinch.upload(String)</para></listitem><listitem><para>reap the rewards of not having to re-code this functionality </para></listitem></orderedlist>
+</para>    </detaileddescription>
+    <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="21" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="20" bodyend="228"/>
+    <listofallmembers>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a22e6581675a84937ebc9ead4c1109570" prot="private" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>_reg</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>getWinch</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1aa260cf55e58230cd670e91507ec4704c" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>getWinch</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a59d46b83cc5f9106aab011bb58b55ecd" prot="protected" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>getWinches</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a830bb6d507e304f5562ee9f6b54429a4" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>getWinchExamples</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a8b260eecbaabcef8473fd87ada040682" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>main</name></member>
+      <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1ae893b0fc6603239324297b31118fae7d" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>WinchFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

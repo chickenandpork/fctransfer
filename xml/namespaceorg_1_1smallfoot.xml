@@ -3,7 +3,6 @@
   <compounddef id="namespaceorg_1_1smallfoot" kind="namespace">
     <compoundname>org::smallfoot</compoundname>
     <innernamespace refid="namespaceorg_1_1smallfoot_1_1filexfer">org::smallfoot::filexfer</innernamespace>
-    <innernamespace refid="namespaceorg_1_1smallfoot_1_1transfer">org::smallfoot::transfer</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

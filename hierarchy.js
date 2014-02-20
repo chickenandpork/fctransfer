@@ -19,5 +19,6 @@ var hierarchy =
     [ "URLStreamHandler", null, [
       [ "Handler", "classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1Handler.html", null ]
     ] ],
-    [ "version", "classorg_1_1smallfoot_1_1transfer_1_1version.html", null ]
+    [ "version", "classorg_1_1smallfoot_1_1filexfer_1_1version.html", null ],
+    [ "WinchFactory", "classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory.html", null ]
 ];

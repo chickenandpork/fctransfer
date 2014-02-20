@@ -5,6 +5,8 @@
     <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" prot="public">org::smallfoot::filexfer::ApacheCommonsNetSFTP</innerclass>
     <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" prot="public">org::smallfoot::filexfer::FileTransferWinch</innerclass>
     <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" prot="public">org::smallfoot::filexfer::FTP4J</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1version" prot="public">org::smallfoot::filexfer::version</innerclass>
+    <innerclass refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory" prot="public">org::smallfoot::filexfer::WinchFactory</innerclass>
     <innernamespace refid="namespaceorg_1_1smallfoot_1_1filexfer_1_1sftp">org::smallfoot::filexfer::sftp</innernamespace>
     <briefdescription>
     </briefdescription>

@@ -78,36 +78,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="63">
+      <node id="65">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="64" relation="public-inheritance">
+        <childnode refid="66" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="64">
+      <node id="66">
         <label>Exception</label>
       </node>
-      <node id="62">
+      <node id="64">
         <label>FileTransferWinch.FileTransferAbortedException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="66">
+      <node id="68">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="67">
+      <node id="69">
         <label>Exception</label>
       </node>
-      <node id="65">
+      <node id="67">
         <label>FileTransferWinch.FileTransferAbortedException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferAbortedException"/>
-        <childnode refid="66" relation="public-inheritance">
+        <childnode refid="68" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

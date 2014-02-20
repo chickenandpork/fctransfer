@@ -408,19 +408,19 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="90">
+      <node id="92">
         <label>ApacheCommonsNetSFTP</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP"/>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>FTP4J</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
       <node id="91">
-        <label>FTP4J</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
-        <childnode refid="89" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="89">
         <label>FileTransferWinch</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
       </node>

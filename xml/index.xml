@@ -80,8 +80,17 @@
     <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1aa608e58be69b0389d82d846a25091d36" kind="function"><name>setContentType</name></member>
     <member refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection_1ac2f45f32dfcaef408189cabb2644841c" kind="function"><name>setRequestHeader</name></member>
   </compound>
-  <compound refid="classorg_1_1smallfoot_1_1transfer_1_1version" kind="class"><name>org::smallfoot::transfer::version</name>
-    <member refid="classorg_1_1smallfoot_1_1transfer_1_1version_1ae4faf7ff4190d227357ef851490d7757" kind="function"><name>main</name></member>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1version" kind="class"><name>org::smallfoot::filexfer::version</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1version_1ae4faf7ff4190d227357ef851490d7757" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory" kind="class"><name>org::smallfoot::filexfer::WinchFactory</name>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a22e6581675a84937ebc9ead4c1109570" kind="variable"><name>_reg</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" kind="function"><name>getWinch</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1aa260cf55e58230cd670e91507ec4704c" kind="function"><name>getWinch</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a830bb6d507e304f5562ee9f6b54429a4" kind="function"><name>getWinchExamples</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a8b260eecbaabcef8473fd87ada040682" kind="function"><name>main</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a59d46b83cc5f9106aab011bb58b55ecd" kind="function"><name>getWinches</name></member>
+    <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1ae893b0fc6603239324297b31118fae7d" kind="function"><name>WinchFactory</name></member>
   </compound>
   <compound refid="namespaceit_1_1sauronsoftware_1_1ftp4j" kind="namespace"><name>it::sauronsoftware::ftp4j</name>
   </compound>
@@ -94,8 +103,6 @@
   <compound refid="namespaceorg_1_1smallfoot_1_1filexfer" kind="namespace"><name>org::smallfoot::filexfer</name>
   </compound>
   <compound refid="namespaceorg_1_1smallfoot_1_1filexfer_1_1sftp" kind="namespace"><name>org::smallfoot::filexfer::sftp</name>
-  </compound>
-  <compound refid="namespaceorg_1_1smallfoot_1_1transfer" kind="namespace"><name>org::smallfoot::transfer</name>
   </compound>
   <compound refid="README_8dox" kind="file"><name>README.dox</name>
   </compound>

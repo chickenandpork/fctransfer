@@ -79,42 +79,42 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="77">
+      <node id="79">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="78" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="76">
-        <label>FileTransferWinch.FileTransferDataTransferException</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
-        <childnode refid="77" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="79">
-        <label>FileTransferWinch.FileTransferChecksumMismatchException</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException"/>
-        <childnode refid="76" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
       </node>
       <node id="78">
+        <label>FileTransferWinch.FileTransferDataTransferException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
+        <childnode refid="79" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>FileTransferWinch.FileTransferChecksumMismatchException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferChecksumMismatchException"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="80">
         <label>Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="81">
+      <node id="83">
         <label>FileTransferWinch.FileTransferWinchException</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException"/>
-        <childnode refid="82" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="80">
-        <label>FileTransferWinch.FileTransferDataTransferException</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
-        <childnode refid="81" relation="public-inheritance">
+        <childnode refid="84" relation="public-inheritance">
         </childnode>
       </node>
       <node id="82">
+        <label>FileTransferWinch.FileTransferDataTransferException</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="84">
         <label>Exception</label>
       </node>
     </collaborationgraph>

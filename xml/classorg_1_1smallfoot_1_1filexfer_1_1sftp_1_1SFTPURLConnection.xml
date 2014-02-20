@@ -143,30 +143,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="109">
-        <label>SFTPURLConnection</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection"/>
-        <childnode refid="110" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="110">
-        <label>URLConnection</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="111">
         <label>SFTPURLConnection</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection"/>
         <childnode refid="112" relation="public-inheritance">
         </childnode>
-        <childnode refid="113" relation="usage">
+      </node>
+      <node id="112">
+        <label>URLConnection</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="113">
+        <label>SFTPURLConnection</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1sftp_1_1SFTPURLConnection"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+        <childnode refid="115" relation="usage">
           <edgelabel>ssh</edgelabel>
         </childnode>
       </node>
-      <node id="113">
+      <node id="115">
         <label>SSHClient</label>
       </node>
-      <node id="112">
+      <node id="114">
         <label>URLConnection</label>
       </node>
     </collaborationgraph>

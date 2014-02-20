@@ -9,10 +9,9 @@ var annotated =
           ] ],
           [ "ApacheCommonsNetSFTP", "classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP.html", "classorg_1_1smallfoot_1_1filexfer_1_1ApacheCommonsNetSFTP" ],
           [ "FileTransferWinch", "classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch.html", "classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch" ],
-          [ "FTP4J", "classorg_1_1smallfoot_1_1filexfer_1_1FTP4J.html", "classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" ]
-        ] ],
-        [ "transfer", null, [
-          [ "version", "classorg_1_1smallfoot_1_1transfer_1_1version.html", "classorg_1_1smallfoot_1_1transfer_1_1version" ]
+          [ "FTP4J", "classorg_1_1smallfoot_1_1filexfer_1_1FTP4J.html", "classorg_1_1smallfoot_1_1filexfer_1_1FTP4J" ],
+          [ "version", "classorg_1_1smallfoot_1_1filexfer_1_1version.html", "classorg_1_1smallfoot_1_1filexfer_1_1version" ],
+          [ "WinchFactory", "classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory.html", "classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory" ]
         ] ]
       ] ]
     ] ]

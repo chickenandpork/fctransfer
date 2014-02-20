@@ -166,18 +166,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="101">
-        <label>FTP4J</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
-        <childnode refid="102" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="102">
-        <label>FileTransferWinch</label>
-        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="103">
         <label>FTP4J</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
@@ -185,6 +173,18 @@
         </childnode>
       </node>
       <node id="104">
+        <label>FileTransferWinch</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="105">
+        <label>FTP4J</label>
+        <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FTP4J"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="106">
         <label>FileTransferWinch</label>
         <link refid="classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch"/>
       </node>
