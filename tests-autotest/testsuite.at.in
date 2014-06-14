@@ -4,7 +4,7 @@ AT_INIT()
 AT_SETUP(version)
 dnl      ------
 
-AT_CHECK([java -cp $abs_top_builddir/java/fctransfer.jar org.smallfoot.transfer.version], 0, [stdout], [])
+AT_CHECK([java -cp $abs_top_builddir/java/fctransfer.jar org.smallfoot.filexfer.version], 0, [stdout], [])
 
 dnl check winches
 AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -L], 0, [     : ftp://scott:tiger@example.com/path/file

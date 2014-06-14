@@ -1,9 +1,9 @@
-DIST_SUBDIRS =	depjars java tests-autotest
+DIST_SUBDIRS =	depjars java convjars tests-autotest
 SUBDIRS =	depjars
 if DO_JAVA
 SUBDIRS +=	java
 endif
-SUBDIRS +=	tests-autotest
+SUBDIRS +=	convjars tests-autotest
 
 ACLOCAL_AMFLAGS = -I m4
 

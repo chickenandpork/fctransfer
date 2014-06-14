@@ -20,7 +20,7 @@ AC_PROG_MAKE_SET
 
 AC_SUBST(AUTOM4TE, autom4te)
 
-SVN_CHECK_JDK([1.6.0])
+SVN_CHECK_JDK([1.6],[1.6])
 AM_CONDITIONAL(DO_JAVA, test "$JAVAC" != none)
 
 dnl ***********************************************************************
@@ -168,6 +168,7 @@ AC_SUBST([COMMONSNETSSHJAR], ${WITH_COMMONSNETSSHJAR})
 
 
 AC_CONFIG_FILES(Makefile
+  convjars/Makefile 
   depjars/Makefile 
   java/Makefile java/WinchFactory.java
   java/version.java
