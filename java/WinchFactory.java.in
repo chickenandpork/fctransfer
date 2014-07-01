@@ -5,6 +5,7 @@ import gnu.getopt.Getopt;
 import gnu.getopt.LongOpt;
 import java.util.TreeSet;
 import java.util.Vector;
+/* *@DO_GETOPTJAR_TRUE@/        import org.smallfoot.getopt.GetOpt;        /*@DO_GETOPTJAR_TRUE@ */
 
 /**
  * @file
@@ -122,13 +123,14 @@ public class WinchFactory
         java.util.Vector<LongOpt> options = new java.util.Vector(6,2);
 
         /* Always always ALWAYS provide a quick reference and a version output */
-        //options.add(new LongOpt("help", LongOpt.NO_ARGUMENT, null, 'H'));
-        //options.add(new LongOpt("version", LongOpt.NO_ARGUMENT, null, 'V'));
+        options.add(new LongOpt("help", LongOpt.NO_ARGUMENT, null, 'H'));
+        options.add(new LongOpt("version", LongOpt.NO_ARGUMENT, null, 'V'));
 
         options.add(new LongOpt("uploadurl", LongOpt.REQUIRED_ARGUMENT, null, 'U'));
         options.add(new LongOpt("upload", LongOpt.REQUIRED_ARGUMENT, null, 'u'));
         options.add(new LongOpt("list", LongOpt.NO_ARGUMENT, null, 'l'));
         options.add(new LongOpt("listwinchexamples", LongOpt.NO_ARGUMENT, null, 'L'));
+        options.add(new LongOpt("checkcrypto", LongOpt.NO_ARGUMENT, null, 'X'));
 
         /* the following two @DO_GETOPTJAR... stuff causes either one or the other line's comment
          * termination to get bombed out -- effectively causing the comment block to continue to
@@ -140,7 +142,7 @@ public class WinchFactory
          */
 
         /* *@DO_GETOPTJAR_TRUE@/        Getopt g = new org.smallfoot.getopt.GetOpt("upload", args, options);        /*@DO_GETOPTJAR_TRUE@ */
-        /* *@DO_GETOPTJAR_FALSE@/        Getopt g = new gnu.getopt.Getopt("upload", args, "U:u:lL", options);        /@DO_GETOPTJAR_FALSE@* */
+        /* *@DO_GETOPTJAR_FALSE@/        Getopt g = new gnu.getopt.Getopt("upload", args, "HVU:u:lLX", options);        /@DO_GETOPTJAR_FALSE@* */
 
         int c;
         while ((c = g.getopt()) != -1)
@@ -210,10 +212,8 @@ for (FileTransferWinch f: winches)
                 }
                 break;
 
-            default:
-                System.out.println("usage: upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
-                System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
-
+            case 'X': /* check crypto */
+		{
                 java.security.Provider p[] = java.security.Security.getProviders();
                 for (int i = 0; i < p.length; i++)
                 {
@@ -221,6 +221,23 @@ for (FileTransferWinch f: winches)
                     for (java.util.Enumeration<?> e = p[i].keys(); e.hasMoreElements();)
                         System.out.println("\t" + e.nextElement());
                 }
+		}
+                break;
+
+            /*
+             * Follows is the "house-keeping": versions, usage, and the catch-all for bad options.
+             */
+            case 'V':
+                System.out.println("@PACKAGE@-@VERSION@.@BUILDID@");
+                return;
+
+            default:
+            case '?':
+            case 'H':
+                System.out.println("usage: upload -V|--version|-H|--help");
+                System.out.println("       upload -X    (show the crypto available)");
+		System.out.println("       upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
+                System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
                 break;
             }
         }
