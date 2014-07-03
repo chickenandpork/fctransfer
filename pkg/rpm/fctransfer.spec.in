@@ -45,8 +45,6 @@ Tools and Resources collected from my "fctools" project for uploading large data
 
 %install
 make install DESTDIR=%{buildroot}
-rm %{buildroot}/%{_datadir}/@PACKAGE@/java.class
-rm %{buildroot}/%{_datadir}/@PACKAGE@/java.jar
 rm -fr %{buildroot}/%{_datadir}/@PACKAGE@/jars
 
 %clean

@@ -9,12 +9,10 @@ AM_JAVACFLAGS= -cp $(top_builddir)/$(subdir)/$(JAVAROOT)
 
 BUILDTMP=$(shell date +%s)
 
-JARS := commons-net-3.1.jar commons-lang3-3.1.jar ftp4j-1.7.1.jar log4j-1.2.17.jar slf4j-simple-1.7.5.jar
-BUILT_SOURCES := $(JARS)
+JARS = commons-net-3.1.jar commons-lang3-3.1.jar ftp4j-1.7.1.jar
 
 if BUILD_COMMONSNETSSHJAR
 JARS		+= commons-net-ssh.jar
-BUILT_SOURCES	+= commons-net-ssh.jar
 endif
 
 %.jar: %-bin.zip
@@ -45,6 +43,8 @@ ftp4j-1.7.1.zip:
 	touch $@
 
 
+JARS += slf4j-simple-1.7.5.jar slf4j-api-1.7.5.jar log4j-1.2.17.jar
+
 slf4j-1.7.5.zip:
 	test -f $${TMPDIR-/tmp}/$(@F) && cp $${TMPDIR-/tmp}/$(@F) $@ || true
 	test -f $@ || curl -Lo $@ http://www.slf4j.org/dist/$(@F)
@@ -61,6 +61,8 @@ log4j-1.2.17.zip:
 	touch $@
 
 
+JARS += jzlib-1.1.2.jar
+
 #dnl com.jcraft.jzlib BSD
 jzlib-1.1.2.zip:
 	test -f $${TMPDIR-/tmp}/$(@F) && cp $${TMPDIR-/tmp}/$(@F) $@ || true
@@ -74,6 +76,8 @@ jzlib-1.1.2.jar: jzlib-1.1.2.zip
 	test -d $$(basename $(@F) .jar)-bld || mkdir -p $$(basename $(@F) .jar)-bld
 	$(JAVAC) -d $$(basename $(@F) .jar)-bld $$(find $$(basename $(@F) .jar) -name *.java)
 	(cd $$(basename $(@F) .jar)-bld && jar cf ../$(@F) com)
+
+JARS += bcprov-jdk15on-149.jar bcpkix-jdk15on-149.jar bcpg-jdk15on-149.jar
 
 #dnl org.bouncycastle BSD-like requires copyright notice
 # http://www.bouncycastle.org/download/bcprov-jdk15on-149.jar
@@ -94,6 +98,7 @@ commons-net-ssh.jar: slf4j-api-1.7.5.jar jzlib-1.1.2.jar bcpkix-jdk15on-149.jar 
 	$(JAVAC) -cp slf4j-api-1.7.5.jar:jzlib-1.1.2.jar:bcpkix-jdk15on-149.jar:bcprov-jdk15on-149.jar -d $$(basename $(@F) .jar) $$(find commons-net-ssh-read-only/src/main/java/org -name *.java)
 	(cd $$(basename $(@F) .jar) && jar cf ../$(@F) org)
 
+BUILT_SOURCES := $(JARS)
 
 check-local: $(JARS)
 	for i in $<; do jar tf $$i >/dev/null || exit 1; done
