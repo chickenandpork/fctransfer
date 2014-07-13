@@ -1,4 +1,4 @@
 <map id="FileTransferWinch.FileTransferChecksumMismatchException" name="FileTransferWinch.FileTransferChecksumMismatchException">
-<area shape="rect" href="$classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException.html" title="This exception alerts to issues during transfer of data: connection lost, etc ... ..." alt="" coords="5,176,243,221"/>
-<area shape="rect" href="$classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException.html" title="A base collector exception: &quot;there was some exception in the FileTransferWinch class&quot;; typically..." alt="" coords="5,83,243,128"/>
+<area shape="rect" id="node2" href="$classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferDataTransferException.html" title="This exception alerts to issues during transfer of data: connection lost, etc ... ..." alt="" coords="5,169,208,207"/>
+<area shape="rect" id="node3" href="$classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException.html" title="A base collector exception: &quot;there was some exception in the FileTransferWinch class&quot;; typically..." alt="" coords="5,81,208,119"/>
 </map>

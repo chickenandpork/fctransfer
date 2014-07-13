@@ -1,6 +1,5 @@
-%!PS-Adobe-2.0
-%%Creator: Graphviz version 2.14.1 (Fri Nov  9 08:19:38 GMT 2007)
-%%For: (allan.clark) Allan Clark
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.36.0 (20140111.2315)
 %%Title: FileTransferWinch.FileTransferDataTransferException
 %%Pages: (atend)
 %%BoundingBox: (atend)
@@ -62,6 +61,7 @@ cleartomark
 /unfilled { } bind def
 /rounded { } bind def
 /diagonals { } bind def
+/tapered { } bind def
 
 % hooks for setting color 
 /nodecolor { sethsbcolor } bind def
@@ -88,17 +88,15 @@ cleartomark
 	scalefont setfont
 } def
 
-% draw aligned label in bounding box aligned to current point
-/alignedtext {			% width adj text
+% draw text fitted to its expected width
+/alignedtext {			% width text
 	/text exch def
-	/adj exch def
 	/width exch def
 	gsave
 		width 0 gt {
-			text stringwidth pop adj mul 0 rmoveto
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
 		} if
-		[] 0 setdash
-		text show
 	grestore
 } def
 
@@ -181,123 +179,123 @@ def
 %%EndSetup
 setupLatin1
 %%Page: 1 1
-%%PageBoundingBox: 36 36 222 206
+%%PageBoundingBox: 36 36 196 196
 %%PageOrientation: Portrait
 0 0 1 beginpage
 gsave
-36 36 222 206 boxprim clip newpath
+36 36 160 160 boxprim clip newpath
 1 1 set_scale 0 rotate 40 40 translate
 % Node1
 gsave
-0.000 0.000 0.749 nodecolor
-newpath 0 0 moveto
-0 34 lineto
-178 34 lineto
-178 0 lineto
+0 0 0.74902 nodecolor
+newpath -.26 1 moveto
+-.26 29 lineto
+152.26 29 lineto
+152.26 1 lineto
 closepath fill
 1 setlinewidth
 filled
-0.000 0.000 0.000 nodecolor
-newpath 0 0 moveto
-0 34 lineto
-178 34 lineto
-178 0 lineto
+0 0 0 nodecolor
+newpath -.26 1 moveto
+-.26 29 lineto
+152.26 29 lineto
+152.26 1 lineto
 closepath stroke
-0.000 0.000 0.000 nodecolor
-10.00 /Helvetica set_font
-8 20 moveto 162 0 (FileTransferWinch.FileTransfer) alignedtext
-0.000 0.000 0.000 nodecolor
-10.00 /Helvetica set_font
-89 7 moveto 123 -0.5 (DataTransferException) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+7.74 17 moveto 136.52 (FileTransferWinch.FileTransfer) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+25.05 7 moveto 101.9 (DataTransferException) alignedtext
 grestore
 % Node2
 gsave
-[ /Rect [ 0 70 178 104 ]
+[ /Rect [ -.26 66.5 152 95.5 ]
   /Border [ 0 0 0 ]
   /Action << /Subtype /URI /URI ($classorg_1_1smallfoot_1_1filexfer_1_1FileTransferWinch_1_1FileTransferWinchException.html) >>
   /Subtype /Link
 /ANN pdfmark
-0.000 0.000 1.000 nodecolor
-newpath 0 70 moveto
-0 104 lineto
-178 104 lineto
-178 70 lineto
+0 0 1 nodecolor
+newpath -.26 67 moveto
+-.26 95 lineto
+152.26 95 lineto
+152.26 67 lineto
 closepath fill
 1 setlinewidth
 filled
-0.000 0.000 0.000 nodecolor
-newpath 0 70 moveto
-0 104 lineto
-178 104 lineto
-178 70 lineto
+0 0 0 nodecolor
+newpath -.26 67 moveto
+-.26 95 lineto
+152.26 95 lineto
+152.26 67 lineto
 closepath stroke
-0.000 0.000 0.000 nodecolor
-10.00 /Helvetica set_font
-8 90 moveto 162 0 (FileTransferWinch.FileTransfer) alignedtext
-0.000 0.000 0.000 nodecolor
-10.00 /Helvetica set_font
-89 77 moveto 86 -0.5 (WinchException) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+7.74 83 moveto 136.52 (FileTransferWinch.FileTransfer) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+40.15 73 moveto 71.7 (WinchException) alignedtext
 grestore
 % Node2->Node1
 gsave
 1 setlinewidth
 solid
-0.667 0.776 0.439 edgecolor
-newpath 89 60 moveto
-89 51 89 42 89 34 curveto
+0.66667 0.77647 0.43922 edgecolor
+newpath 76 56.59 moveto
+76 47.38 76 37.14 76 29.24 curveto
 stroke
-0.667 0.776 0.439 edgecolor
-newpath 85.5001 60 moveto
-89 70 lineto
-92.5001 60 lineto
+0.66667 0.77647 0.43922 edgecolor
+newpath 72.5 56.74 moveto
+76 66.74 lineto
+79.5 56.74 lineto
 closepath fill
 1 setlinewidth
 solid
-0.667 0.776 0.439 edgecolor
-newpath 85.5001 60 moveto
-89 70 lineto
-92.5001 60 lineto
+0.66667 0.77647 0.43922 edgecolor
+newpath 72.5 56.74 moveto
+76 66.74 lineto
+79.5 56.74 lineto
 closepath stroke
 grestore
 % Node3
 gsave
-0.000 0.000 1.000 nodecolor
-newpath 55 140 moveto
-55 161 lineto
-124 161 lineto
-124 140 lineto
+0 0 1 nodecolor
+newpath 46.04 133 moveto
+46.04 151 lineto
+105.96 151 lineto
+105.96 133 lineto
 closepath fill
 1 setlinewidth
 filled
-0.000 0.000 0.749 nodecolor
-newpath 55 140 moveto
-55 161 lineto
-124 161 lineto
-124 140 lineto
+0 0 0.74902 nodecolor
+newpath 46.04 133 moveto
+46.04 151 lineto
+105.96 151 lineto
+105.96 133 lineto
 closepath stroke
-0.000 0.000 0.000 nodecolor
-10.00 /Helvetica set_font
-89 147 moveto 53 -0.5 (Exception) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+54.04 139 moveto 43.92 (Exception) alignedtext
 grestore
 % Node3->Node2
 gsave
 1 setlinewidth
 solid
-0.667 0.776 0.439 edgecolor
-newpath 89 130 moveto
-89 122 89 112 89 104 curveto
+0.66667 0.77647 0.43922 edgecolor
+newpath 76 122.65 moveto
+76 113.74 76 103.22 76 95.12 curveto
 stroke
-0.667 0.776 0.439 edgecolor
-newpath 85.5001 130 moveto
-89 140 lineto
-92.5001 130 lineto
+0.66667 0.77647 0.43922 edgecolor
+newpath 72.5 122.8 moveto
+76 132.8 lineto
+79.5 122.8 lineto
 closepath fill
 1 setlinewidth
 solid
-0.667 0.776 0.439 edgecolor
-newpath 85.5001 130 moveto
-89 140 lineto
-92.5001 130 lineto
+0.66667 0.77647 0.43922 edgecolor
+newpath 72.5 122.8 moveto
+76 132.8 lineto
+79.5 122.8 lineto
 closepath stroke
 grestore
 endpage
@@ -307,7 +305,7 @@ grestore
 %%EndPage: 1
 %%Trailer
 %%Pages: 1
-%%BoundingBox: 36 36 222 206
+%%BoundingBox: 36 36 196 196
 end
 restore
 %%EOF
