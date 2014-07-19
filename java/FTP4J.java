@@ -152,20 +152,20 @@ public class FTP4J extends FileTransferWinch
 
     public String getPass()
     {
-	if (null == super.getUser(url))	/* implying anonymous user */
-	    return "fctransfer@github.com";
-	else
-	    return super.getPass(url);
+        if (null == super.getUser(url))	/* implying anonymous user */
+            return "fctransfer@github.com";
+        else
+            return super.getPass(url);
     }
 
     public String getUser()
     {
-	String res = super.getUser(url);
+        String res = super.getUser(url);
 
-	if (null == res)
-	    return "anonymous";
-	else
-	    return res;
+        if (null == res)
+            return "anonymous";
+        else
+            return res;
     }
 
 }
