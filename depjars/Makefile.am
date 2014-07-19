@@ -3,7 +3,8 @@ dist_depjar_DATA = $(JARS)
 
 
 EXTRA_DIST = $(nodist_pkgdata_JAVA)
-CONFIG_CLEAN_FILES = $(JARS)
+CONFIG_CLEAN_FILES = $(JARS) commons-lang3-3.1-bin.zip commons-net-3.1-bin.zip commons-net-3.3-bin.zip ftp4j-1.7.1.zip jzlib-1.1.2.zip log4j-1.2.17.zip slf4j-1.7.5.zip
+
 
 AM_JAVACFLAGS= -cp $(top_builddir)/$(subdir)/$(JAVAROOT)
 
@@ -105,4 +106,8 @@ BUILT_SOURCES := $(JARS)
 
 check-local: $(JARS)
 	for i in $<; do jar tf $$i >/dev/null || exit 1; done
+
+clean-local:
+	rm -fr jzlib-1.1.2-bld jzlib-1.1.2
+
 

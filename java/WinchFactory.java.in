@@ -98,7 +98,11 @@ public class WinchFactory
                 p.setProperty("java.protocol.handler.pkgs",p.getProperty("java.protocol.handler.pkgs")+"|org.smallfoot.filexfer");
 
             System.setProperties(p);
-            org.apache.commons.net.ssh.util.SecurityUtils.isBouncyCastleRegistered();
+
+	    /* http://www.bouncycastle.org/wiki/display/JA1/Provider+Installation */
+            java.security.Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            //boolean reg = org.apache.commons.net.ssh.util.SecurityUtils.isBouncyCastleRegistered();
+            //System.out.println("registered: "+reg);
 
             _reg = true;
         }
@@ -106,11 +110,9 @@ public class WinchFactory
 
 
 
+
     public static void main(String[] args)
     {
-        WinchFactory wf = new WinchFactory();
-        java.util.Vector<FileTransferWinch> winches = new java.util.Vector();
-
         try
         {
             java.lang.ClassLoader.getSystemClassLoader().loadClass("org.slf4j.impl.StaticLoggerBinder");
@@ -119,6 +121,9 @@ public class WinchFactory
         {
             e.printStackTrace();
         }
+
+        WinchFactory wf = new WinchFactory();
+        java.util.Vector<FileTransferWinch> winches = new java.util.Vector();
 
         java.util.Vector<LongOpt> options = new java.util.Vector(6,2);
 
@@ -153,7 +158,7 @@ public class WinchFactory
             {
                 try
                 {
-for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
+                    for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
                         System.out.println("     : "+s);
                 }
                 catch (java.net.MalformedURLException mue)
@@ -166,9 +171,9 @@ for (String s:wf.getWinchExamples("http://scott:tiger@example.com/path/file"))
             case 'l': /* list winches */
             {
                 TreeSet<String> t = new TreeSet();
-for (FileTransferWinch f: wf.getWinches())
+                for (FileTransferWinch f: wf.getWinches())
                     t.add(f.getClass().getName().replaceAll("^.*\\.",""));
-for (String s:t)
+                for (String s:t)
                     System.out.println("winch: "+s);
             }
             break;
@@ -199,7 +204,7 @@ for (String s:t)
                 {
                     //FileTransferWinch f1[] = null;
 
-for (FileTransferWinch f: winches)
+                    for (FileTransferWinch f: winches)
                     {
                         System.out.println("trying winch: "+f.getClass().getName());
                         f.upload(g.getOptarg(), null);
@@ -213,7 +218,7 @@ for (FileTransferWinch f: winches)
                 break;
 
             case 'X': /* check crypto */
-		{
+            {
                 java.security.Provider p[] = java.security.Security.getProviders();
                 for (int i = 0; i < p.length; i++)
                 {
@@ -221,8 +226,8 @@ for (FileTransferWinch f: winches)
                     for (java.util.Enumeration<?> e = p[i].keys(); e.hasMoreElements();)
                         System.out.println("\t" + e.nextElement());
                 }
-		}
-                break;
+            }
+            break;
 
             /*
              * Follows is the "house-keeping": versions, usage, and the catch-all for bad options.
@@ -236,7 +241,7 @@ for (FileTransferWinch f: winches)
             case 'H':
                 System.out.println("usage: upload -V|--version|-H|--help");
                 System.out.println("       upload -X    (show the crypto available)");
-		System.out.println("       upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
+                System.out.println("       upload -U <URL> [-U <URL> [-U <URL>]] -u <file> [-u <file> [-u <file>]]");
                 System.out.println("   ie: upload -U sharepoint://scott:tiger@wisdom.example.com/sites/Services/ts/Services%20Schedule/Calendar.xlsx -u Calendar.xlsx");
                 break;
             }

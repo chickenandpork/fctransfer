@@ -7,12 +7,12 @@ dnl      ------
 AT_CHECK([java -cp $abs_top_builddir/java/fctransfer.jar org.smallfoot.filexfer.version], 0, [stdout], [])
 
 dnl check winches
-AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -L], 0, [     : ftp://scott:tiger@example.com/path/file
+AT_CHECK([java -jar $abs_top_builddir/convjars/fctransfer.jar -L], 0, [     : ftp://scott:tiger@example.com/path/file
      : sftp://scott:tiger@example.com/path/file
 ], [])
 
 dnl check winches
-AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -l], 0, [winch: ApacheCommonsNetSFTP
+AT_CHECK([java -jar $abs_top_builddir/convjars/fctransfer.jar -l], 0, [winch: ApacheCommonsNetSFTP
 winch: FTP4J
 ], [])
 
@@ -33,7 +33,7 @@ AT_SETUP(upload)
 dnl      ------
 
 AT_CHECK([if test @FTPTESTURL@ = no ; then exit 77; fi])
-AT_CHECK([java -jar $abs_top_builddir/fctransfer.jar -U "@FTPTESTURL@" -u $abs_top_builddir/README.md], 0, [], [])
+AT_CHECK([java -jar $abs_top_builddir/convjars/fctransfer.jar -U "@FTPTESTURL@" -u $abs_top_builddir/README.md], 0, [], [])
 AT_CLEANUP()
 
 

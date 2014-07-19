@@ -22,7 +22,6 @@ public class SFTPURLConnection extends java.net.URLConnection
     public SFTPURLConnection(java.net.URL url)
     {
         super(url);
-System.out.println("public SFTPURLConnection(java.net.URL "+url.toString()+")");
     }
 
 
@@ -59,9 +58,6 @@ System.out.println("public SFTPURLConnection(java.net.URL "+url.toString()+")");
 
     public void connect()
     {
-//System.out.println("void connect(), connectionInfo=\""+connectionInfo+"\", user=\""+properties.get("user")+"\", password=\""+properties.get("password")+"\"");
-System.out.println("void connect(), user/pass=\""+url.getUserInfo()+"\"");
-
             ssh = new SSHClient();
         try
         {

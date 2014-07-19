@@ -21,5 +21,5 @@ JAVAROOT = bld
 	find $(@D)/.workdir '(' -name \*.java -o -name COPYING.LIB -o -name \*.html -o -name README -o -name Makefile -o -name ChangeLog -o -name GetoptDemo.class -o -name LANGUAGES -o -name \*.xml ')' -exec rm {} \;
 	rm -fr $(@D)/.workdir/org/bouncycastle/jcajce/provider/asymmetric
 	(cd $(@D)/.workdir && jar cm MANIFEST.MF META-INF gnu it org) > $@
-	echo rm -fr $(@D)/.workdir
+	rm -fr $(@D)/.workdir
 
