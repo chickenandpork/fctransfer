@@ -146,6 +146,7 @@ AC_SUBST([GETOPTJAR], ${WITH_GETOPTJAR})
 
 
 
+AC_CHECK_PROG(SVN, [svn], [svn],[missing svn])
 AC_ARG_WITH(commons-net-ssh,
 [AS_HELP_STRING([--with-commons-net-ssh],[Enable inclusion of a commons-net-ssh .jar; default=svn co and build])],
 [
