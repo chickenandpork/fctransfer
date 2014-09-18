@@ -16,7 +16,6 @@ gitdescribe
 
 
 # Package Files #
-*.jar
 *.war
 *.ear
 Doxyfile

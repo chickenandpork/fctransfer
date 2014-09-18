@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="109" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="109" bodyend="244"/>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="114" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="114" bodyend="249"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -162,7 +162,7 @@
 <para>NOTE: my own code uses &quot;package1:package2&quot; whereas the example uses &quot;package1|package2&quot; </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="89" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="89" bodyend="105"/>
+        <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="89" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="89" bodyend="109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -171,7 +171,7 @@
 <para><orderedlist>
 <listitem><para>use <ref refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" kindref="member">getWinch(String)</ref> to find an appropriate winch for a URL</para></listitem><listitem><para>exercise the winch using FileTransferWinch.upload(File) or FileTransferWinch.upload(String)</para></listitem><listitem><para>reap the rewards of not having to re-code this functionality </para></listitem></orderedlist>
 </para>    </detaileddescription>
-    <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="22" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="21" bodyend="245"/>
+    <location file="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" line="22" column="1" bodyfile="/Users/allan.clark/src/fctransfer/java/WinchFactory.java" bodystart="21" bodyend="250"/>
     <listofallmembers>
       <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a22e6581675a84937ebc9ead4c1109570" prot="private" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>_reg</name></member>
       <member refid="classorg_1_1smallfoot_1_1filexfer_1_1WinchFactory_1a1267459debe1139bfc984cd72c915e87" prot="public" virt="non-virtual"><scope>org::smallfoot::filexfer::WinchFactory</scope><name>getWinch</name></member>
