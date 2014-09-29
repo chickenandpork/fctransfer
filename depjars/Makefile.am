@@ -74,13 +74,13 @@ jzlib-1.1.2.jar: jzlib-1.1.2.zip
 	$(JAVAC) -d $$(basename $(@F) .jar)-bld $$(find $$(basename $(@F) .jar) -name *.java)
 	(cd $$(basename $(@F) .jar)-bld && jar cf ../$(@F) com)
 
-JARS += bcprov-jdk15on-149.jar bcpkix-jdk15on-149.jar bcpg-jdk15on-149.jar
+JARS += bcprov-jdk15on-151.jar bcpkix-jdk15on-151.jar bcpg-jdk15on-151.jar
 
 #dnl org.bouncycastle BSD-like requires copyright notice
-# http://www.bouncycastle.org/download/bcprov-jdk15on-149.jar
-# http://polydistortion.net/bc/download/bcprov-jdk15on-149.jar
-# http://www.bouncycastle.org/download/bcpkix-jdk15on-149.jar
-bcprov-jdk15on-149.jar bcpkix-jdk15on-149.jar bcpg-jdk15on-149.jar:
+# http://www.bouncycastle.org/download/bcprov-jdk15on-151.jar
+# http://polydistortion.net/bc/download/bcprov-jdk15on-151.jar
+# http://www.bouncycastle.org/download/bcpkix-jdk15on-151.jar
+bcprov-jdk15on-151.jar bcpkix-jdk15on-151.jar bcpg-jdk15on-151.jar:
 	test -f $${TMPDIR-/tmp}/$(@F) && cp $${TMPDIR-/tmp}/$(@F) $@ || true
 	test -f $@ || curl -Lo $@ http://www.bouncycastle.org/download/$(@F)
 	test -f $${TMPDIR-/tmp}/$(@F) || cp $@ $${TMPDIR-/tmp}/$(@F)
@@ -92,10 +92,10 @@ JARS		+= commons-net-ssh.jar
 
 if BUILD_COMMONSNETSSHJAR
 #dnl Apache License-2.0
-commons-net-ssh.jar: slf4j-api-1.7.5.jar jzlib-1.1.2.jar bcpkix-jdk15on-149.jar bcprov-jdk15on-149.jar bcpg-jdk15on-149.jar
+commons-net-ssh.jar: slf4j-api-1.7.5.jar jzlib-1.1.2.jar bcpkix-jdk15on-151.jar bcprov-jdk15on-151.jar bcpg-jdk15on-151.jar
 	test -d commons-net-ssh-read-only || svn co http://commons-net-ssh.googlecode.com/svn/ commons-net-ssh-read-only
 	test -d $$(basename $(@F) .jar) || mkdir -p $$(basename $(@F) .jar)
-	$(JAVAC) -cp slf4j-api-1.7.5.jar:jzlib-1.1.2.jar:bcpkix-jdk15on-149.jar:bcprov-jdk15on-149.jar -d $$(basename $(@F) .jar) $$(find commons-net-ssh-read-only/src/main/java/org -name *.java)
+	$(JAVAC) -cp slf4j-api-1.7.5.jar:jzlib-1.1.2.jar:bcpkix-jdk15on-151.jar:bcprov-jdk15on-151.jar -d $$(basename $(@F) .jar) $$(find commons-net-ssh-read-only/src/main/java/org -name *.java)
 	(cd $$(basename $(@F) .jar) && jar cf ../$(@F) org)
 else
 commons-net-ssh.jar: @COMMONSNETSSHJAR@

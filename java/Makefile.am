@@ -5,7 +5,7 @@ javadir = $(pkgdir)
 EXTRA_DIST = $(nodist_java_JAVA) WinchFactory.java.in
 CONFIG_CLEAN_FILES = @PACKAGE@.jar WinchFactory.java version.java
 
-AM_JAVACFLAGS= @JAVAC_FLAGS@ -cp $(JAVAROOT):$(top_builddir)/depjars/commons-lang3-3.1.jar:$(top_builddir)/depjars/commons-net-3.1.jar:$(top_builddir)/depjars/ftp4j-1.7.1.jar:$(top_builddir)/depjars/slf4j-api-1.7.5.jar:$(top_builddir)/depjars/jzlib-1.1.2.jar:$(top_builddir)/depjars/bcpkix-jdk15on-149.jar:$(top_srcdir)/depjars/bcprov-jdk15on-149.jar:$(top_srcdir)/depjars/commons-net-ssh.jar:$(top_builddir)/depjars/log4j-1.2.17.jar:@GETOPTJAR@
+AM_JAVACFLAGS= @JAVAC_FLAGS@ -cp $(JAVAROOT):$(top_builddir)/depjars/commons-lang3-3.1.jar:$(top_builddir)/depjars/commons-net-3.1.jar:$(top_builddir)/depjars/ftp4j-1.7.1.jar:$(top_builddir)/depjars/slf4j-api-1.7.5.jar:$(top_builddir)/depjars/jzlib-1.1.2.jar:$(top_builddir)/depjars/bcpkix-jdk15on-151.jar:$(top_srcdir)/depjars/bcprov-jdk15on-151.jar:$(top_srcdir)/depjars/commons-net-ssh.jar:$(top_builddir)/depjars/log4j-1.2.17.jar:@GETOPTJAR@
 
 BUILDTMP=$(shell date +%s)
 

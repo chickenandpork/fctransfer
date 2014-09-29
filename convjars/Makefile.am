@@ -7,9 +7,9 @@ BUILDTMP=$(shell date +%s)
 JAVAROOT = bld
 
 
-#depjars/bcprov-jdk15on-149.jar is signed and needs to be present in the classpath declaration for now
+#depjars/bcprov-jdk15on-151.jar is signed and needs to be present in the classpath declaration for now
 
-@PACKAGE@.jar: ../java/@PACKAGE@.jar @GETOPTJAR@ ../depjars/bcpkix-jdk15on-149.jar ../depjars/bcprov-jdk15on-149.jar ../depjars/bcpg-jdk15on-149.jar ../depjars/commons-lang3-3.1.jar ../depjars/commons-net-3.1.jar ../depjars/commons-net-ssh.jar ../depjars/ftp4j-1.7.1.jar ../depjars/jzlib-1.1.2.jar ../depjars/slf4j-api-1.7.5.jar ../depjars/slf4j-simple-1.7.5.jar
+@PACKAGE@.jar: ../java/@PACKAGE@.jar @GETOPTJAR@ ../depjars/bcpkix-jdk15on-151.jar ../depjars/bcprov-jdk15on-151.jar ../depjars/bcpg-jdk15on-151.jar ../depjars/commons-lang3-3.1.jar ../depjars/commons-net-3.1.jar ../depjars/commons-net-ssh.jar ../depjars/ftp4j-1.7.1.jar ../depjars/jzlib-1.1.2.jar ../depjars/slf4j-api-1.7.5.jar ../depjars/slf4j-simple-1.7.5.jar
 	-rm -fr $(@D)/.workdir
 	mkdir -p $(@D)/.workdir
 	ln -f $^ $(@D)/.workdir/
