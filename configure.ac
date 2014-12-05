@@ -160,7 +160,7 @@ AC_MSG_CHECKING([for commons-net-ssh.jar])
 [
 AC_MSG_CHECKING([for commons-net-ssh.jar])
     WITH_COMMONSNETSSHJAR=$((locate commons-net-ssh.jar) | grep -v .workdir | head -1) ;
-    if test -z "${WITH_COMMONSNETSSHJAR}"; then WITH_COMMONSNETSSHJAR=build; fi
+    if test -z "${WITH_COMMONSNETSSHJAR}" -o \! -f "${WITH_COMMONSNETSSHJAR}"; then WITH_COMMONSNETSSHJAR=build; fi
 AC_MSG_RESULT([${WITH_COMMONSNETSSHJAR}])
 ])
 AM_CONDITIONAL(BUILD_COMMONSNETSSHJAR, test "$WITH_COMMONSNETSSHJAR" = build)
