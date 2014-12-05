@@ -189,7 +189,7 @@ AC_CONFIG_FILES(Makefile
   depjars/Makefile 
   java/Makefile java/WinchFactory.java
   java/version.java
-  tests-autotest/Makefile tests-autotest/atlocal tests-autotest/testsuite.at
+  tests-autotest/Makefile tests-autotest/testsuite.at
 )
 
 if test "x$RPMBUILD" != "xmissing rpmbuild"

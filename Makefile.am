@@ -67,7 +67,7 @@ srpm: distcheck
 	@mkdir -p $$(rpm --eval '%{_srcrpmdir}')
 	@RPMBUILD@ -ts $(PACKAGE)-$(VERSION).tar.bz2
 if DO_SUDOPOSTMOVE
-	mv $$(rpm --eval '%{_srcrpmdir}')/@PACKAGE@-$$(rpm --qf '%{VERSION}\n' -q --specfile @PACKAGE@.spec |head -1)-$$(rpm --qf '%{RELEASE}\n' -q --specfile @PACKAGE@.spec |head -1).src.rpm @SUDOPOSTMOVE@
+	mv -f $$(rpm --eval '%{_srcrpmdir}')/@PACKAGE@-$$(rpm --qf '%{VERSION}\n' -q --specfile @PACKAGE@.spec |head -1)-$$(rpm --qf '%{RELEASE}\n' -q --specfile @PACKAGE@.spec |head -1).src.rpm @SUDOPOSTMOVE@
 endif   DO_SUDOPOSTMOVE
 
 if DO_GITFORMATTING
@@ -81,4 +81,8 @@ rpm: dist-bzip2
 endif DO_GITFORMATTING_FALSE
 	@RPMBUILD@ --define 'skipcheck 1' -ta $(PACKAGE)-$(VERSION).tar.bz2
 endif
+
+buildcheck: dist-bzip2
+	rm -fr tests-autotest/testsuite.dir
+	make check || cat tests-autotest/testsuite.dir/*/testsuite.log
 
